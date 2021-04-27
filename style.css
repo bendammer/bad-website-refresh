@@ -19,7 +19,6 @@ a {
     height: 100vh;
     max-width: 100%;
     max-height: 100%;
-    overflow-x: hidden;
 }
 
 .mobile-header {
@@ -150,6 +149,10 @@ a {
     width: 80vw;
 }
 
+.mobile-portrait-images:last-child {
+    margin: 0 0 1.5em 0;
+}
+
 /* PRODUCT PORTRAIT MOBILE */
 
 .mobile-portfolio-product {
@@ -221,6 +224,10 @@ a {
     transition: all .3s ease-in-out;
 }
 
+.mobile-banner.mobile-work-banner:first-child {
+    margin: 0 0 1em 0;
+}
+
 .mobile-work-banner .banner-img {
     max-height: 15vh;
     width: 85%;
@@ -248,6 +255,10 @@ a {
     width: 85vw;
     max-width: 470px;
     margin: 2vh 0 0 0;
+}
+
+.mobile-about-content {
+    margin: 0 0 1.5em 0;
 }
 
 .mobile-about-content p {
@@ -382,7 +393,13 @@ a {
     max-height: 90%;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES MOBILE */
+
+@media screen and (min-width: 600px) and (max-width: 769px) {
+    .mobile-contact-content p {
+        font-size: 1.5em;
+    }
+}
 
 @media screen and (max-width: 770px) {
     .mobile {
@@ -391,7 +408,7 @@ a {
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (max-width: 769px) {
     #bad-logo {
         width: 45%;
     }
@@ -401,7 +418,7 @@ a {
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) and (max-width: 769px) {
     .mobile-footer a:first-of-type {
         margin: 0 0 0 15em;
     }
