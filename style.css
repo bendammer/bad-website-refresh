@@ -1,0 +1,412 @@
+/* BASICS */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Saira, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+} 
+
+/* MOBILE */
+
+.mobile {
+    display: none;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+.mobile-header {
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-header-subpage {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-header-subpage a {
+    display: flex;
+    justify-content: center;
+}
+
+/* LOGO */
+
+#bad-logo {
+    width: 60%;
+}
+
+#bad-logo-subpage {
+    width: 45%;
+}
+
+/* BODY MOBILE */
+
+.mobile-body {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SUBPAGE MOBILE */
+
+.mobile-body-subpage {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;   
+}
+
+.mobile-subpage-title {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-subpage-title p {
+    font-family: Saira Semi Condensed, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 10vw;
+    font-weight: 200;
+}
+
+/* BANNER MOBILE */
+
+.mobile-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mobile-banner .banner-img {
+    max-height: 15vh;
+    width: 85%;
+    margin: 0 0 3.5vh 0;
+    opacity: .4;
+    object-fit: cover;
+    border-radius: 1.5vh;
+}
+
+.mobile-banner .banner-text {
+    position: absolute;
+    padding: 0 0 3.5vh 0;
+    font-size: 1.5em;
+}
+
+/* PORTFOLIO MOBILE */
+
+.mobile-portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 2vh 0 0 0;
+}
+
+.mobile-portfolio img {
+    max-width: 100%;
+    margin: 0 0 2vh 0;
+}
+
+/* PORTFOLIO PORTRAIT MOBILE */
+
+.mobile-portfolio-portrait {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.mobile-portrait-title {
+    width: 15vw;
+    position: relative;
+    white-space: nowrap;
+    word-spacing: 2vw;
+}
+
+.mobile-portrait-title p {
+    font-size: 6vw;
+    transform: rotate(90deg);
+}
+
+.mobile-portrait-images {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+/* PRODUCT PORTRAIT MOBILE */
+
+.mobile-portfolio-product {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.mobile-product-title {
+    width: 15vw;
+    position: relative;
+}
+
+.mobile-product-title p {
+    font-size: 6vw;
+    transform: rotate(90deg);
+}
+
+.mobile-product-images {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+/* STREET PORTRAIT MOBILE */
+
+.mobile-portfolio-street {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.mobile-street-title {
+    width: 15vw;
+    position: relative;
+}
+
+.mobile-street-title p {
+    font-size: 6vw;
+    transform: rotate(90deg);
+}
+
+.mobile-street-images {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+/* WORK MOBILE */
+
+.mobile-work {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    margin: 2vh 0 0 0;
+}
+
+.mobile-work img {
+    max-width: 100%;
+    margin: 0 0 2vh 0;
+}
+
+.mobile-work-banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.mobile-work-banner .banner-img {
+    max-height: 15vh;
+    width: 85%;
+    margin: 0 0 3.5vh 0;
+    opacity: .4;
+    object-fit: cover;
+    border-radius: 1.5vh;
+}
+
+.mobile-work-banner .banner-text {
+    position: absolute;
+    padding: 0 0 3.5vh 0;
+    font-size: 1.5em;
+}
+
+/* ABOUT MOBILE */
+
+.mobile-body-subpage-about {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-about {
+    display: flex;
+    width: 85vw;
+    max-width: 470px;
+    margin: 2vh 0 0 0;
+}
+
+.mobile-about-content p {
+    letter-spacing: .1vw;
+    font-size: 1.1em;
+}
+
+.text-highlight {
+    color: rgb(82,235,59);
+}
+
+/* CONTACT MOBILE */
+
+.mobile-contact {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-contact-content p {
+    letter-spacing: .1vw;
+    font-size: 1.2em;
+}
+
+.text-highlight-font-bigger {
+    font-size: 1.5em;
+}
+
+/* DATA-PROTECTION MOBILE */
+
+.mobile-data-protection {
+    display: flex;
+    width: 85vw;
+    margin: 2vh 0 0 0;
+}
+
+.mobile-data-protection-content {
+    font-size: .8em;
+}
+
+/* IMPRINT MOBILE */
+
+.mobile-imprint {
+    display: flex;
+    width: 85vw;
+    margin: 2vh 0 0 0;
+}
+
+.mobile-imprint-content {
+    font-size: .8em;
+}
+
+/* FOOTER MOBILE */
+
+.mobile-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    height: 4vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    opacity: .85;
+}
+
+.mobile-footer a {
+    font-size: .6em;
+}
+
+/* FOOTER SUBPAGE MOBILE */
+
+.mobile-footer-subpage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    height: 4vh;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    opacity: .85;
+}
+
+.mobile-footer-subpage a {
+    font-size: .6em;
+}
+
+.mobile-footer a:first-of-type {
+    margin: 0 0 0 10em;
+}
+
+.mobile-footer a:last-of-type {
+    margin: 0 10em 0 0;
+}
+
+.mobile-footer-subpage a:first-of-type {
+    margin: 0 0 0 10em;
+}
+
+.mobile-footer-subpage a:last-of-type {
+    margin: 0 10em 0 0;
+}
+
+/* LIGHTBOX */
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: none;
+}
+  
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#lightbox.active img:hover {
+    opacity: 1;
+}
+  
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 770px) {
+    .mobile {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #bad-logo {
+        width: 45%;
+    }
+
+    .mobile-banner .banner-text {
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .mobile-footer a:first-of-type {
+        margin: 0 0 0 15em;
+    }
+    
+    .mobile-footer a:last-of-type {
+        margin: 0 15em 0 0;
+    }
+}
