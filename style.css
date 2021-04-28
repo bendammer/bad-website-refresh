@@ -45,7 +45,7 @@ a {
 /* LOGO */
 
 #bad-logo {
-    max-width: 800px;
+    max-height: 210px;
 }
 
 #bad-logo-subpage {
@@ -205,7 +205,7 @@ a {
 
 .mobile-work {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100vw;
     margin: 2vh 0 0 0;
 }
@@ -224,7 +224,7 @@ a {
     transition: all .3s ease-in-out;
 }
 
-.mobile-banner.mobile-work-banner:first-child {
+.mobile-banner.mobile-work-banner:last-child {
     margin: 0 0 1em 0;
 }
 
