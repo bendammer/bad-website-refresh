@@ -45,11 +45,11 @@ a {
 /* LOGO */
 
 #bad-logo {
-    width: 60%;
+    max-width: 800px;
 }
 
 #bad-logo-subpage {
-    width: 45%;
+    max-height: 160px;
 }
 
 /* BODY MOBILE */
