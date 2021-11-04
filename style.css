@@ -207,7 +207,14 @@ a {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    margin: 2vh 0 0 0;
+    
+}
+
+.mobile-work-banner-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin: 10vh 0 0 0;
 }
 
 .mobile-work img {
@@ -222,10 +229,7 @@ a {
     width: 100%;
     cursor: pointer;
     transition: all .3s ease-in-out;
-}
-
-.mobile-banner.mobile-work-banner:last-child {
-    margin: 0 0 1em 0;
+    margin: 5vh 0 5vh 0;
 }
 
 .mobile-work-banner .banner-img {
@@ -515,6 +519,12 @@ a {
     max-height: 20vh;
     margin: 0 10vw 0 0;
     font-size: 1.8em;
+}
+
+#desktop-work-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .desktop-about-body p {
