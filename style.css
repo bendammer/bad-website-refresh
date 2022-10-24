@@ -149,6 +149,11 @@ a {
     width: 80vw;
 }
 
+video {
+    max-width: 700px;
+    margin: 0 1em 1em 0;
+}
+
 .mobile-portrait-images:last-child {
     margin: 0 0 1.5em 0;
 }
@@ -468,11 +473,11 @@ a {
 }
 
 .desktop-portfolio img.hochkant {
-    max-height: 430px;
+    max-height: 300px;
 }
 
 .desktop-portfolio img.querformat {
-    max-height: 430px;
+    max-height: 300px;
 }
 
 .desktop-banner:hover {
