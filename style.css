@@ -219,7 +219,7 @@ video {
     display: flex;
     flex-direction: column;
     height: 60vh;
-    margin: 10vh 0 0 0;
+    margin: 3vh 0 0 0;
 }
 
 .mobile-work img {
@@ -234,7 +234,7 @@ video {
     width: 100%;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    margin: 5vh 0 5vh 0;
+    margin: 3vh 0 0vh 0;
 }
 
 .mobile-work-banner .banner-img {
@@ -482,11 +482,12 @@ video {
 
 .desktop-banner:hover {
     transition: all .2s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .desktop-banner a:hover {
     transition: all .08s ease-in-out;
+    transform: scale(1.05);
     color: rgb(82,235,59);
 }
 
@@ -534,6 +535,13 @@ video {
 
 .desktop-about-body p {
     margin: 0;
+}
+
+.desktop-work-banner-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .desktop-contact-container {
