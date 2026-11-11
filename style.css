@@ -912,7 +912,31 @@ img {
         height: 48px;
     }
 
-    .lb-close { top: 16px; right: 16px; }
+    /* mobile: close cross centered directly above the photo, counter directly below it */
+    #lightbox .lb-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #lightbox .lb-image {
+        max-height: calc(100vh - 170px);
+        max-height: calc(100dvh - 170px);
+    }
+
+    .lb-close {
+        position: static;
+        margin: 0 0 6px 0;
+    }
+
+    .lb-counter {
+        position: static;
+        margin-top: 12px;
+        left: auto;
+        right: auto;
+    }
+
     .lb-prev { left: 4px; margin-top: -24px; }
     .lb-next { right: 4px; margin-top: -24px; }
 
@@ -1286,3 +1310,9 @@ img {
 
 .home-gallery-wrap { width: 100%; }
 .desktop-body-project .home-gallery-wrap .desktop-portfolio { margin-bottom: 10em; }
+
+/* lightbox stage wraps close/photo/counter; on desktop it stays layout-neutral */
+#lightbox .lb-stage { display: contents; }
+@media screen and (max-width: 770px) {
+    #lightbox .lb-stage { display: flex; }
+}

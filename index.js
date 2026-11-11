@@ -32,11 +32,13 @@
   lightbox.setAttribute('aria-modal', 'true');
   lightbox.setAttribute('aria-label', 'Image viewer');
   lightbox.innerHTML =
+    '<div class="lb-stage">' +
     '<button type="button" class="lb-btn lb-close" aria-label="Close">' + ICON.close + '</button>' +
-    '<button type="button" class="lb-btn lb-prev" aria-label="Previous image">' + ICON.prev + '</button>' +
     '<img class="lb-image" alt="">' +
-    '<button type="button" class="lb-btn lb-next" aria-label="Next image">' + ICON.next + '</button>' +
-    '<div class="lb-counter" aria-live="polite"></div>';
+    '<div class="lb-counter" aria-live="polite"></div>' +
+    '</div>' +
+    '<button type="button" class="lb-btn lb-prev" aria-label="Previous image">' + ICON.prev + '</button>' +
+    '<button type="button" class="lb-btn lb-next" aria-label="Next image">' + ICON.next + '</button>';
   document.body.appendChild(lightbox);
 
   const imgEl = lightbox.querySelector('.lb-image');
