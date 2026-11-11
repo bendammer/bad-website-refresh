@@ -1,0 +1,22 @@
+{
+  "name": "BAD Photography",
+  "owner": "Ben Aaron Dammer",
+  "url": "https://benaarondammer.studio",
+  "age": 25,
+  "instagram": "https://www.instagram.com/benaarondammer",
+  "image": { "widths": [500, 1000], "quality": 82 },
+  "descriptions": {
+    "home": "BAD Photography: portfolio of Ben Aaron Dammer, freelance photographer in Düsseldorf, Germany. Portrait, fashion, street and commercial photography.",
+    "portfolio": "Selected portrait, fashion and street photography by Ben Aaron Dammer, freelance photographer based in Düsseldorf.",
+    "work": "Commissioned photography projects by BAD Photography: events, brands, campaigns and weddings in Düsseldorf and beyond.",
+    "about": "About Ben Aaron Dammer, freelance photographer in Düsseldorf and founder of BAD Photography.",
+    "contact": "Contact Ben Aaron Dammer (BAD Photography) for photography projects, bookings and collaborations."
+  },
+  "homeBanners": [
+    { "id": "portfolio", "file": "banner1.jpg", "href": "portfolio.html", "text": "PORTFOLIO" },
+    { "id": "work", "file": "banner3.jpg", "href": "work.html", "text": "WORK" },
+    { "id": "about", "file": "banner5.jpg", "href": "about.html", "text": "ABOUT" },
+    { "id": "contact", "file": "banner2.jpg", "href": "contact.html", "text": "CONTACT" }
+  ],
+  "staticPages": ["imprint.html", "data-protection.html"]
+}

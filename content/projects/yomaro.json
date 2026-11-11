@@ -1,0 +1,26 @@
+{
+  "title": "YOMARO",
+  "label": "yomaro",
+  "slug": "yomaro",
+  "order": 14,
+  "imageDir": "yomaro",
+  "cover": {
+    "legacy": "images/banner/banner_yomaro.jpg"
+  },
+  "videos": [
+    "Yomaro_1_Video.mp4"
+  ],
+  "images": [
+    "BAD_Yomaro_001.jpg",
+    "BAD_Yomaro_002.jpg",
+    "BAD_Yomaro_003.jpg",
+    "BAD_Yomaro_004.jpg",
+    "BAD_Yomaro_005.jpg",
+    "BAD_Yomaro_006.jpg",
+    "BAD_Yomaro_007.jpg",
+    "BAD_Yomaro_008.jpg",
+    "BAD_Yomaro_009.jpg",
+    "BAD_Yomaro_010.jpg",
+    "BAD_Yomaro_011.jpg"
+  ]
+}

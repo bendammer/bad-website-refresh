@@ -1,0 +1,38 @@
+{
+  "title": "KUESSDENFROSCH",
+  "label": "kuessdenfrosch",
+  "slug": "kuessdenfrosch",
+  "order": 12,
+  "imageDir": "kuessdenfrosch",
+  "cover": {
+    "legacy": "images/banner/banner_kuessdenfrosch.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_BilkerBunker_5_007.jpg",
+    "BAD_BilkerBunker_5_006.jpg",
+    "BAD_BilkerBunker_5_008.jpg",
+    "BAD_BilkerBunker_5_004.jpg",
+    "BAD_BilkerBunker_5_005.jpg",
+    "BAD_BilkerBunker_5_002.jpg",
+    "BAD_BilkerBunker_5_001.jpg",
+    "BAD_BilkerBunker_5_003.jpg",
+    "BAD_BilkerBunker_5_009.jpg",
+    "BAD_BilkerBunker_5_010.jpg",
+    "BAD_BilkerBunker_001.jpg",
+    "BAD_BilkerBunker_002.jpg",
+    "BAD_BilkerBunker_003.jpg",
+    "BAD_BilkerBunker_004.jpg",
+    "BAD_BilkerBunker_005.jpg",
+    "BAD_BilkerBunker_006.jpg",
+    "BAD_BilkerBunker_007.jpg",
+    "BAD_BilkerBunker_008.jpg",
+    "BAD_BilkerBunker_009.jpg",
+    "BAD_BilkerBunker_010.jpg",
+    "BAD_BilkerBunker_011.jpg",
+    "BAD_BilkerBunker_012.jpg",
+    "BAD_BilkerBunker_013.jpg",
+    "BAD_BilkerBunker_014.jpg",
+    "BAD_BilkerBunker_015.jpg"
+  ]
+}

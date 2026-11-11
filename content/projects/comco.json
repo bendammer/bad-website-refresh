@@ -1,0 +1,24 @@
+{
+  "title": "COMCO GMBH",
+  "label": "comco gmbh",
+  "slug": "comco",
+  "order": 10,
+  "imageDir": "comco",
+  "cover": {
+    "legacy": "images/banner/banner_comco.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_comco_001.jpg",
+    "BAD_comco_002.jpg",
+    "BAD_comco_003.jpg",
+    "BAD_comco_004.jpg",
+    "BAD_comco_005.jpg",
+    "BAD_comco_006.jpg",
+    "BAD_comco_007.jpg",
+    "BAD_comco_008.jpg",
+    "BAD_comco_009.jpg",
+    "BAD_comco_010.jpg",
+    "BAD_comco_011.jpg"
+  ]
+}

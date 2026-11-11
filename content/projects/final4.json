@@ -1,0 +1,49 @@
+{
+  "title": "FINAL4",
+  "label": "FINAL4 2023",
+  "slug": "final4",
+  "order": 8,
+  "imageDir": "Final4_2023",
+  "cover": {
+    "legacy": "images/banner/banner_final4.jpg"
+  },
+  "videos": [
+    "final4.recap.m4v"
+  ],
+  "images": [
+    "BAD_Final4_2023_018.jpg",
+    "BAD_Final4_2023_002.jpg",
+    "BAD_Final4_2023_003.jpg",
+    "BAD_Final4_2023_004.jpg",
+    "BAD_Final4_2023_005.jpg",
+    "BAD_Final4_2023_006.jpg",
+    "BAD_Final4_2023_007.jpg",
+    "BAD_Final4_2023_008.jpg",
+    "BAD_Final4_2023_009.jpg",
+    "BAD_Final4_2023_010.jpg",
+    "BAD_Final4_2023_011.jpg",
+    "BAD_Final4_2023_012.jpg",
+    "BAD_Final4_2023_013.jpg",
+    "BAD_Final4_2023_014.jpg",
+    "BAD_Final4_2023_015.jpg",
+    "BAD_Final4_2023_016.jpg",
+    "BAD_Final4_2023_017.jpg",
+    "BAD_Final4_2023_001.jpg",
+    "BAD_Final4_2023_019.jpg",
+    "BAD_Final4_2023_020.jpg",
+    "BAD_Final4_2023_021.jpg",
+    "BAD_Final4_2023_022.jpg",
+    "BAD_Final4_2023_023.jpg",
+    "BAD_Final4_2023_024.jpg",
+    "BAD_Final4_2023_025.jpg",
+    "BAD_Final4_2023_026.jpg",
+    "BAD_Final4_2023_027.jpg",
+    "BAD_Final4_2023_028.jpg",
+    "BAD_Final4_2023_029.jpg",
+    "BAD_Final4_2023_030.jpg",
+    "BAD_Final4_2023_031.jpg",
+    "BAD_Final4_2023_032.jpg",
+    "BAD_Final4_2023_033.jpg",
+    "BAD_Final4_2023_034.jpg"
+  ]
+}

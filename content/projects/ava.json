@@ -1,0 +1,37 @@
+{
+  "title": "AVA GMBH",
+  "label": "ava gmbh",
+  "slug": "ava",
+  "order": 17,
+  "imageDir": "ava",
+  "cover": {
+    "legacy": "images/banner/banner_ava.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_AVA_001.jpg",
+    "BAD_AVA_002.jpg",
+    "BAD_AVA_003.jpg",
+    "BAD_AVA_004.jpg",
+    "BAD_AVA_005.jpg",
+    "BAD_AVA_006.jpg",
+    "BAD_AVA_007.jpg",
+    "BAD_AVA_008.jpg",
+    "BAD_AVA_009.jpg",
+    "BAD_AVA_010.jpg",
+    "BAD_AVA_011.jpg",
+    "BAD_AVA_012.jpg",
+    "BAD_AVA_013.jpg",
+    "BAD_AVA_014.jpg",
+    "BAD_AVA_015.jpg",
+    "BAD_AVA_016.jpg",
+    "BAD_AVA_017.jpg",
+    "BAD_AVA_018.jpg",
+    "BAD_AVA_019.jpg",
+    "BAD_AVA_020.jpg",
+    "BAD_AVA_021.jpg",
+    "BAD_AVA_022.jpg",
+    "BAD_AVA_023.jpg",
+    "BAD_AVA_024.jpg"
+  ]
+}

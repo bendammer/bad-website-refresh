@@ -1,0 +1,19 @@
+{
+  "title": "FRITZ KOLA",
+  "label": "fritz kola",
+  "slug": "fritzkola",
+  "order": 19,
+  "imageDir": "fritzkola",
+  "cover": {
+    "legacy": "images/banner/banner_fritzkola.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_FritzKola_001.jpg",
+    "BAD_FritzKola_002.jpg",
+    "BAD_FritzKola_003.jpg",
+    "BAD_FritzKola_004.jpg",
+    "BAD_FritzKola_005.jpg",
+    "BAD_FritzKola_006.jpg"
+  ]
+}

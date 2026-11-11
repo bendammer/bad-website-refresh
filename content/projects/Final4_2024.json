@@ -1,0 +1,36 @@
+{
+  "title": "FINAL4 2024",
+  "label": "FINAL4 2024",
+  "slug": "Final4_2024",
+  "order": 3,
+  "imageDir": "Final4_Halle_2024",
+  "cover": {
+    "dir": "Final4_Halle_2024",
+    "file": "BAD_Final4_Halle_2024_016.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_Final4_Halle_2024_001.jpg",
+    "BAD_Final4_Halle_2024_002.jpg",
+    "BAD_Final4_Halle_2024_003.jpg",
+    "BAD_Final4_Halle_2024_004.jpg",
+    "BAD_Final4_Halle_2024_005.jpg",
+    "BAD_Final4_Halle_2024_006.jpg",
+    "BAD_Final4_Halle_2024_007.jpg",
+    "BAD_Final4_Halle_2024_008.jpg",
+    "BAD_Final4_Halle_2024_009.jpg",
+    "BAD_Final4_Halle_2024_010.jpg",
+    "BAD_Final4_Halle_2024_011.jpg",
+    "BAD_Final4_Halle_2024_012.jpg",
+    "BAD_Final4_Halle_2024_013.jpg",
+    "BAD_Final4_Halle_2024_014.jpg",
+    "BAD_Final4_Halle_2024_015.jpg",
+    "BAD_Final4_Halle_2024_016.jpg",
+    "BAD_Final4_Halle_2024_017.jpg",
+    "BAD_Final4_Halle_2024_018.jpg",
+    "BAD_Final4_Halle_2024_019.jpg",
+    "BAD_Final4_Halle_2024_020.jpg",
+    "BAD_Final4_Halle_2024_021.jpg",
+    "BAD_Final4_Halle_2024_022.jpg"
+  ]
+}

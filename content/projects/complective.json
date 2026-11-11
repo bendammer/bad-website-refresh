@@ -1,0 +1,28 @@
+{
+  "title": "COMPLECTIVE",
+  "label": "complective",
+  "slug": "complective",
+  "order": 11,
+  "imageDir": "complective",
+  "cover": {
+    "legacy": "images/banner/banner_complective.jpg"
+  },
+  "videos": [
+    "complective.backyard-files.mp4"
+  ],
+  "images": [
+    "BAD_Complective_001.jpg",
+    "BAD_Complective_002.jpg",
+    "BAD_Complective_003.jpg",
+    "BAD_Complective_004.jpg",
+    "BAD_Complective_005.jpg",
+    "BAD_Complective_006.jpg",
+    "BAD_Complective_007.jpg",
+    "BAD_Complective_008.jpg",
+    "BAD_Complective_009.jpg",
+    "BAD_Complective_010.jpg",
+    "BAD_Complective_011.jpg",
+    "BAD_Complective_012.jpg",
+    "BAD_Complective_013.jpg"
+  ]
+}

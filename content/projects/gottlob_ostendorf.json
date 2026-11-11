@@ -1,0 +1,24 @@
+{
+  "title": "GOTTLOB + OSTENDORF",
+  "label": "gottlob + ostendorf",
+  "slug": "gottlob_ostendorf",
+  "order": 9,
+  "imageDir": "gottlob_ostendorf",
+  "cover": {
+    "legacy": "images/banner/banner_gottlob_ostendorf.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_gottlob_ostendorf_001.jpg",
+    "BAD_gottlob_ostendorf_002.jpg",
+    "BAD_gottlob_ostendorf_003.jpg",
+    "BAD_gottlob_ostendorf_004.jpg",
+    "BAD_gottlob_ostendorf_005.jpg",
+    "BAD_gottlob_ostendorf_006.jpg",
+    "BAD_gottlob_ostendorf_007.jpg",
+    "BAD_gottlob_ostendorf_008.jpg",
+    "BAD_gottlob_ostendorf_009.jpg",
+    "BAD_gottlob_ostendorf_010.jpg",
+    "BAD_gottlob_ostendorf_011.jpg"
+  ]
+}

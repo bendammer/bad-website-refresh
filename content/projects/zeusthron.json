@@ -1,0 +1,27 @@
+{
+  "title": "ZEUS THRON",
+  "label": "zeus thron",
+  "slug": "zeusthron",
+  "order": 13,
+  "imageDir": "zeusthron",
+  "cover": {
+    "legacy": "images/banner/banner_zeus.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_ZeusThron_001.jpg",
+    "BAD_ZeusThron_002.jpg",
+    "BAD_ZeusThron_003.jpg",
+    "BAD_ZeusThron_004.jpg",
+    "BAD_ZeusThron_005.jpg",
+    "BAD_ZeusThron_006.jpg",
+    "BAD_ZeusThron_007.jpg",
+    "BAD_ZeusThron_008.jpg",
+    "BAD_ZeusThron_009.jpg",
+    "BAD_ZeusThron_010.jpg",
+    "BAD_ZeusThron_011.jpg",
+    "BAD_ZeusThron_012.jpg",
+    "BAD_ZeusThron_013.jpg",
+    "BAD_ZeusThron_014.jpg"
+  ]
+}

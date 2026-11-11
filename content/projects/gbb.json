@@ -1,0 +1,27 @@
+{
+  "title": "GOLDEN BUMBLEBEE",
+  "label": "golden bumblebee",
+  "slug": "gbb",
+  "order": 16,
+  "imageDir": "gbb",
+  "cover": {
+    "legacy": "images/banner/banner_gbb.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_GBB_001.jpg",
+    "BAD_GBB_002.jpg",
+    "BAD_GBB_005.jpg",
+    "BAD_GBB_006.jpg",
+    "BAD_GBB_007.jpg",
+    "BAD_GBB_008.jpg",
+    "BAD_GBB_009.jpg",
+    "BAD_GBB_011.jpg",
+    "BAD_GBB_012.jpg",
+    "BAD_GBB_014.jpg",
+    "BAD_GBB_015.jpg",
+    "BAD_GBB_016.jpg",
+    "BAD_GBB_017.jpg",
+    "BAD_GBB_018.jpg"
+  ]
+}

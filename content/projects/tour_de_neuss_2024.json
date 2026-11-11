@@ -1,0 +1,27 @@
+{
+  "title": "Tour de Neuss 2024",
+  "label": "Tour de Neuss 2024",
+  "slug": "tour_de_neuss_2024",
+  "order": 2,
+  "imageDir": "tour-de-neuss_2024",
+  "cover": {
+    "dir": "tour-de-neuss_2024",
+    "file": "Tour_de_Neuss_2024_web_011.jpg"
+  },
+  "videos": [],
+  "images": [
+    "Tour_de_Neuss_2024_web_001.jpg",
+    "Tour_de_Neuss_2024_web_002.jpg",
+    "Tour_de_Neuss_2024_web_003.jpg",
+    "Tour_de_Neuss_2024_web_004.jpg",
+    "Tour_de_Neuss_2024_web_005.jpg",
+    "Tour_de_Neuss_2024_web_006.jpg",
+    "Tour_de_Neuss_2024_web_007.jpg",
+    "Tour_de_Neuss_2024_web_008.jpg",
+    "Tour_de_Neuss_2024_web_009.jpg",
+    "Tour_de_Neuss_2024_web_010.jpg",
+    "Tour_de_Neuss_2024_web_011.jpg",
+    "Tour_de_Neuss_2024_web_012.jpg",
+    "Tour_de_Neuss_2024_web_013.jpg"
+  ]
+}

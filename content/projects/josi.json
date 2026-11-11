@@ -1,0 +1,32 @@
+{
+  "title": "JOSI Shelter Campaign",
+  "label": "JOSI",
+  "slug": "josi",
+  "order": 1,
+  "imageDir": "josi",
+  "cover": {
+    "dir": "josi",
+    "file": "Josi_Shelter_Campaign_web_013.jpg"
+  },
+  "videos": [],
+  "images": [
+    "Josi_Shelter_Campaign_web_001.jpg",
+    "Josi_Shelter_Campaign_web_002.jpg",
+    "Josi_Shelter_Campaign_web_003.jpg",
+    "Josi_Shelter_Campaign_web_004.jpg",
+    "Josi_Shelter_Campaign_web_005.jpg",
+    "Josi_Shelter_Campaign_web_006.jpg",
+    "Josi_Shelter_Campaign_web_007.jpg",
+    "Josi_Shelter_Campaign_web_008.jpg",
+    "Josi_Shelter_Campaign_web_009.jpg",
+    "Josi_Shelter_Campaign_web_010.jpg",
+    "Josi_Shelter_Campaign_web_011.jpg",
+    "Josi_Shelter_Campaign_web_012.jpg",
+    "Josi_Shelter_Campaign_web_013.jpg",
+    "Josi_Shelter_Campaign_web_014.jpg",
+    "Josi_Shelter_Campaign_web_015.jpg",
+    "Josi_Shelter_Campaign_web_016.jpg",
+    "Josi_Shelter_Campaign_web_017.jpg",
+    "Josi_Shelter_Campaign_web_018.jpg"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "STADTSTRAND DUESSELDORF",
+  "label": "stadtstrand duesseldorf",
+  "slug": "stadtstrand",
+  "order": 15,
+  "imageDir": "stadtstrand",
+  "cover": {
+    "legacy": "images/banner/banner_stadtstrand.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_Stadtstrand_001.jpg",
+    "BAD_Stadtstrand_002.jpg",
+    "BAD_Stadtstrand_003.jpg",
+    "BAD_Stadtstrand_004.jpg",
+    "BAD_Stadtstrand_005.jpg",
+    "BAD_Stadtstrand_006.jpg",
+    "BAD_Stadtstrand_007.jpg",
+    "BAD_Stadtstrand_008.jpg",
+    "BAD_Stadtstrand_009.jpg",
+    "BAD_Stadtstrand_010.jpg",
+    "BAD_Stadtstrand_011.jpg",
+    "BAD_Stadtstrand_012.jpg",
+    "BAD_Stadtstrand_013.jpg",
+    "BAD_Stadtstrand_014.jpg",
+    "BAD_Stadtstrand_015.jpg",
+    "BAD_Stadtstrand_016.jpg",
+    "BAD_Stadtstrand_017.jpg",
+    "BAD_Stadtstrand_018.jpg",
+    "BAD_Stadtstrand_019.jpg",
+    "BAD_Stadtstrand_020.jpg",
+    "BAD_Stadtstrand_021.jpg",
+    "BAD_Stadtstrand_022.jpg"
+  ]
+}

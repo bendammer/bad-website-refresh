@@ -1,0 +1,30 @@
+{
+  "title": "HEUDECKER",
+  "label": "heudecker",
+  "slug": "heudecker",
+  "order": 18,
+  "imageDir": "heudecker",
+  "cover": {
+    "legacy": "images/banner/banner_heudecker.jpg"
+  },
+  "videos": [],
+  "images": [
+    "BAD_Heudecker_001.jpg",
+    "BAD_Heudecker_002.jpg",
+    "BAD_Heudecker_003.jpg",
+    "BAD_Heudecker_004.jpg",
+    "BAD_Heudecker_005.jpg",
+    "BAD_Heudecker_006.jpg",
+    "BAD_Heudecker_007.jpg",
+    "BAD_Heudecker_008.jpg",
+    "BAD_Heudecker_009.jpg",
+    "BAD_Heudecker_010.jpg",
+    "BAD_Heudecker_011.jpg",
+    "BAD_Heudecker_012.jpg",
+    "BAD_Heudecker_013.jpg",
+    "BAD_Heudecker_014.jpg",
+    "BAD_Heudecker_015.jpg",
+    "BAD_Heudecker_016.jpg",
+    "BAD_Heudecker_017.jpg"
+  ]
+}
