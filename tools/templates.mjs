@@ -85,7 +85,25 @@ ${links}
         </div>`;
 }
 
-export function page({ headHtml, body, prefix }) {
+/** Hamburger button + full-screen menu for the mobile layout (styled like the desktop menu) */
+function mobileMenu(p, current) {
+  const items = [['portfolio', 'index.html'], ['work', 'work.html'], ['about', 'about.html'], ['contact', 'contact.html']];
+  const links = items.map(([name, href]) =>
+    `                <a class="mobile-menu-item${name === current ? ' currently-on' : ''}" href="${p}${href}"${name === current ? ' aria-current="page"' : ''}>${name}</a>`).join('\n');
+  return `        <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="Main menu">
+            <div class="mobile-menu-items">
+${links}
+            </div>
+            <div class="mobile-menu-legal">
+                <a href="${p}imprint.html">IMPRINT</a>
+                <a href="${p}data-protection.html">DATA PROTECTION</a>
+            </div>
+        </nav>`;
+}
+
+export function page({ headHtml, body, prefix, current = '' }) {
+  body = body.replace('<div class="mobile">', `<div class="mobile">\n${mobileMenu(prefix, current)}`);
   return `<!DOCTYPE html>
 <html lang="en">
 
@@ -101,17 +119,15 @@ ${body}
 `;
 }
 
-export function homeBody({ site, banners, portfolioImgs }) {
-  const mb = banners.map(b => `            <div class="mobile-banner">
-                ${img(b.info, { prefix: '', alt: '', cls: 'banner-img no-lightbox', id: `${b.id}-banner-img`, sizes: '85vw', eager: false })}
-                <a class="banner-text" id="${b.id}-banner-text" href="${b.href}">${b.text}</a>
-            </div>`).join('\n');
+export function homeBody({ portfolioImgs }) {
   return `    <div class="mobile">
 
 ${mobileHeader('', false)}
 
-        <div class="mobile-body">
-${mb}
+        <div class="mobile-body-home">
+            <div class="mobile-home-images">
+${portfolioImgs}
+            </div>
         </div>
 
 ${mobileFooter('', false)}
