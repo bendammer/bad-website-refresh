@@ -354,7 +354,7 @@ ${desktopNav(p, 'work')}
 
         <div class="desktop-body-container">
 
-            <div class="desktop-body">
+            <div class="desktop-body desktop-body-project">
                 <a class="project-back" href="../work.html">\u2190 back to work</a>
                 <div class="project-head-desktop">
                     <div class="project-head">
@@ -363,7 +363,7 @@ ${desktopNav(p, 'work')}
                     </div>
 ${descDesktop}
                 </div>
-                <div class="desktop-portfolio">
+                <div class="desktop-portfolio project-gallery">
 ${items.join('\n')}
                 </div>
                 ${nextHtml('project-next')}

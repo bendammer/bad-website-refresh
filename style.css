@@ -1244,3 +1244,39 @@ img {
 }
 
 .desktop-body .project-next-title { font-size: 36px; font-weight: 300; }
+
+/* project page desktop: everything left-aligned, as in the design proposal */
+
+.desktop-body-project {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.desktop-portfolio.project-gallery {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    margin: 0;
+}
+
+.desktop-portfolio.project-gallery img,
+.desktop-portfolio.project-gallery img:hover {
+    margin: 0;
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+}
+
+.desktop-portfolio.project-gallery video {
+    height: 300px;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+}
+
+.desktop-body-project .project-head-desktop { width: 100%; }
+
+.desktop-body-project .project-next { margin-bottom: 6em; }
