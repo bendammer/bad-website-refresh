@@ -342,7 +342,7 @@ ${desktopNav(p, 'work')}
         <div class="desktop-body-container">
 
             <div class="desktop-body">
-                <p>${esc(title)}</p>
+                <p class="desktop-title">${esc(title)}</p>
                 <div class="desktop-portfolio">
 ${mediaHtml}
                 </div>

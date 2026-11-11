@@ -28,6 +28,7 @@
   const lightbox = document.createElement('div');
   lightbox.id = 'lightbox';
   lightbox.setAttribute('role', 'dialog');
+  lightbox.tabIndex = -1;
   lightbox.setAttribute('aria-modal', 'true');
   lightbox.setAttribute('aria-label', 'Image viewer');
   lightbox.innerHTML =
@@ -69,7 +70,7 @@
     show(index);
     lightbox.classList.add('active');
     document.documentElement.classList.add('lightbox-open');
-    lightbox.querySelector('.lb-close').focus({ preventScroll: true });
+    lightbox.focus({ preventScroll: true });
   }
 
   function close() {

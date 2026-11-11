@@ -21,8 +21,10 @@ a {
     max-height: 100%;
 }
 
+/* same logo area on every page */
 .mobile-header {
-    height: 20vh;
+    height: 15vh;
+    min-height: 130px;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -31,6 +33,7 @@ a {
 
 .mobile-header-subpage {
     height: 15vh;
+    min-height: 130px;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -45,7 +48,7 @@ a {
 /* LOGO */
 
 #bad-logo-mobile {
-    max-height: 147px;
+    max-height: 112px;
 }
 
 #bad-logo-mobile-subpage {
@@ -810,6 +813,10 @@ img {
     display: none;
 }
 
+#lightbox:focus {
+    outline: none;
+}
+
 #lightbox.active {
     display: flex;
     justify-content: center;
@@ -908,4 +915,35 @@ img {
     .lb-close { top: 16px; right: 16px; }
     .lb-prev { left: 4px; margin-top: -24px; }
     .lb-next { right: 4px; margin-top: -24px; }
+
+    .lb-prev,
+    .lb-next {
+        color: #fff;
+        filter: drop-shadow(0 0 3px rgba(0, 0, 0, .6));
+    }
+}
+
+
+/* HEADLINES – same size and casing as the menu, never all caps */
+
+.mobile-subpage-title p,
+#mobile-portfolio-title,
+.mobile-portrait-title p,
+#mobile-portrait-title {
+    font-family: Saira, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: lowercase;
+}
+
+.desktop-title {
+    font-size: 16px;
+    text-transform: lowercase;
+}
+
+@media screen and (min-width: 1477px) {
+    .desktop-title {
+        font-size: 22px;
+    }
 }
