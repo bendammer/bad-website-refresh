@@ -3,9 +3,20 @@
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export { esc };
 
-const SIZES = '(max-width: 770px) 85vw, 450px';
+const SIZES = '(max-width: 770px) 92vw, 650px';
 
 /** <img> with responsive webp, intrinsic size, alt and native lazy loading */
+// desktop justified rows: every item grows in proportion to its aspect ratio, so all items in a row share one height
+const ROW_H = 300;
+export function justify(html) {
+  return html.replace(/<(img|video)\b([^>]*)>/g, (m, tag, attrs) => {
+    const w = /\bwidth="(\d+)"/.exec(attrs), h = /\bheight="(\d+)"/.exec(attrs);
+    const r = tag === 'video' || !w || !h ? 16 / 9 : (+w[1]) / (+h[1]);
+    const style = `flex:${r.toFixed(3)} 1 ${Math.round(r * ROW_H)}px`;
+    return `<${tag}${attrs} style="${style}">`;
+  });
+}
+
 export function img(info, { prefix, alt, cls = '', eager = false, sizes = SIZES, id = '' }) {
   const srcset = info.variants.map(v => `${prefix}${v.src} ${v.w}w`).join(', ');
   const attrs = [
@@ -141,7 +152,7 @@ ${desktopNav('', 'portfolio')}
             <div class="desktop-body desktop-body-project">
                 <div class="home-gallery-wrap">
                     <div class="desktop-portfolio project-gallery">
-${portfolioImgs}
+${justify(portfolioImgs)}
                     </div>
                 </div>
             </div>
@@ -364,7 +375,7 @@ ${desktopNav(p, 'work')}
 ${descDesktop}
                 </div>
                 <div class="desktop-portfolio project-gallery">
-${items.join('\n')}
+${justify(items.join('\n'))}
                 </div>
                 ${nextHtml('project-next')}
             </div>

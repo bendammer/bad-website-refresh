@@ -1263,18 +1263,21 @@ img {
 }
 
 .desktop-portfolio.project-gallery img,
-.desktop-portfolio.project-gallery img:hover {
+.desktop-portfolio.project-gallery img:hover,
+.desktop-portfolio.project-gallery video {
     margin: 0;
-    height: 300px;
+    min-width: 0;
+    max-width: none;
+    max-height: none;
+    height: auto;
     width: auto;
-    max-width: 100%;
+    object-fit: cover;
 }
 
-.desktop-portfolio.project-gallery video {
-    height: 300px;
-    width: auto;
-    max-width: 100%;
-    margin: 0;
+/* spacer keeps the last row at natural size instead of stretching it */
+.desktop-portfolio.project-gallery::after {
+    content: '';
+    flex: 100 1 0;
 }
 
 .desktop-body-project .project-head-desktop { width: 100%; }
