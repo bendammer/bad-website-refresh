@@ -319,31 +319,31 @@ ${legalDesktop('')}
     </div>`;
 }
 
-export function projectBody({ title, mediaHtml }) {
+export function projectBody({ title, category, description, items, next }) {
   const p = '../';
+  const tag = category ? `<span class="tag">${esc(category)}</span>` : '';
+  const paras = description ? String(description).split(/\n\s*\n/).map(x => `<p>${esc(x.trim())}</p>`).join('\n                        ') : '';
+  const descMobile = paras ? `                    <div class="project-desc project-desc-mobile">\n                        ${paras}\n                    </div>` : '';
+  const descDesktop = paras ? `                    <div class="project-desc">\n                        ${paras}\n                    </div>` : '';
+  const at = Math.min(2, items.length);
+  const mobileMedia = [...items.slice(0, at), ...(descMobile ? [descMobile] : []), ...items.slice(at)].join('\n');
+  const nextHtml = (cls) => next ? `<a class="${cls}" href="${next.slug}.html"><span class="project-next-label">next project</span><span class="project-next-title">${esc(next.title)}</span></a>` : '';
   return `    <div class="mobile">
 
 ${mobileHeader(p, true)}
 
-        <div class="mobile-body-subpage">
+        <div class="mobile-body-subpage mobile-body-project">
 
-            <div class="mobile-subpage-title">
-                <a href="../work.html"><p id="mobile-portfolio-title">WORK</p></a>
+            <div class="project-head">
+                <h1 class="project-title">${esc(title)}</h1>
+                ${tag}
             </div>
 
-            <div class="mobile-portfolio">
-
-                <div class="mobile-portfolio-portrait">
-
-                    <div class="mobile-portrait-title">
-                        <p id="mobile-portrait-title">${esc(title)}</p>
-                    </div>
-
-                    <div class="mobile-portrait-images">
-${mediaHtml}
-                    </div>
-                </div>
+            <div class="mobile-project-images">
+${mobileMedia}
             </div>
+
+            ${nextHtml('project-next')}
         </div>
 
 ${mobileFooter(p, true)}
@@ -355,10 +355,18 @@ ${desktopNav(p, 'work')}
         <div class="desktop-body-container">
 
             <div class="desktop-body">
-                <p class="desktop-title">${esc(title)}</p>
-                <div class="desktop-portfolio">
-${mediaHtml}
+                <a class="project-back" href="../work.html">\u2190 back to work</a>
+                <div class="project-head-desktop">
+                    <div class="project-head">
+                        <h1 class="project-title">${esc(title)}</h1>
+                        ${tag}
+                    </div>
+${descDesktop}
                 </div>
+                <div class="desktop-portfolio">
+${items.join('\n')}
+                </div>
+                ${nextHtml('project-next')}
             </div>
 
         </div>

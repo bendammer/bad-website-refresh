@@ -95,7 +95,8 @@ emit('contact.html', T.page({
 }));
 
 // project pages
-for (const { p, infos, cover } of projData) {
+for (const [pi, { p, infos, cover }] of projData.entries()) {
+  const nextP = projData[(pi + 1) % projData.length].p;
   const prefix = '../';
   const alt = i => `${p.title} – photo ${i + 1}`;
   const videos = (p.videos || []).map(v => {
@@ -107,7 +108,7 @@ for (const { p, infos, cover } of projData) {
   emit(`work/${p.slug}.html`, T.page({
     prefix, current: 'work',
     headHtml: pageHead({ title: `${p.title} – BAD Photography`, description: desc, path: `work/${p.slug}.html`, prefix, ogImage: cover.full }),
-    body: T.projectBody({ title: p.title, mediaHtml: [...videos, ...pics].join('\n') }),
+    body: T.projectBody({ title: p.title, category: p.category, description: p.description, items: [...videos, ...pics].map(x => x.trim()), next: projData.length > 1 ? { slug: nextP.slug, title: nextP.title } : null }),
   }));
 }
 
