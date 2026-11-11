@@ -3,6 +3,13 @@
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 export { esc };
 
+// cache busting: a short content hash on style.css / index.js so browsers never mix new HTML with old CSS
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const ROOT_DIR = new URL('..', import.meta.url).pathname;
+const ver = f => crypto.createHash('md5').update(fs.readFileSync(ROOT_DIR + f)).digest('hex').slice(0, 8);
+const CSS_V = ver('style.css'), JS_V = ver('index.js');
+
 const SIZES = '(max-width: 770px) 92vw, 650px';
 
 /** <img> with responsive webp, intrinsic size, alt and native lazy loading */
@@ -51,7 +58,7 @@ export function head({ title, description, path, prefix, site, ogImage }) {
   <meta property="og:image" content="${og}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${og}">` : ''}
-  <link rel="stylesheet" href="${prefix}style.css">
+  <link rel="stylesheet" href="${prefix}style.css?v=${CSS_V}">
   <link rel="shortcut icon" type="image/x-icon" href="${prefix}images/logos/default.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,7 +130,7 @@ ${headHtml}
 <body>
 ${body}
 
-    <script src="${prefix}index.js"></script>
+    <script src="${prefix}index.js?v=${JS_V}"></script>
 </body>
 
 </html>
