@@ -1,6 +1,7 @@
 {
   "title": "YOMARO",
   "label": "yomaro",
+  "category": "product",
   "slug": "yomaro",
   "order": 14,
   "imageDir": "yomaro",
