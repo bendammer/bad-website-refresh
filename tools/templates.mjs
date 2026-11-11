@@ -196,25 +196,38 @@ ${legalDesktop('')}
     </div>`;
 }
 
+const ARROW = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+/** Work overview: tile grid on mobile, list with hover-expand on desktop. items: {slug,title,category,coverHtml,thumbsHtml[]} */
 export function workBody({ items }) {
-  const list = items.map(it => `                <div class="mobile-banner mobile-work-banner desktop-banner">
-                    ${it.imgHtml}
-                    <a class="banner-text" id="portfolio-banner-text" href="work/${it.slug}.html">${esc(it.label)}</a>
+  const tag = it => it.category ? `<span class="tag">${esc(it.category)}</span>` : '';
+  const tiles = items.map(it => `                <a class="work-tile" href="work/${it.slug}.html">
+                    <div class="work-tile-img">${it.coverTile}</div>
+                    <div class="work-tile-meta"><span class="work-tile-title">${esc(it.title)}</span>${tag(it)}</div>
+                </a>`).join('\n');
+  const rows = items.map(it => `                <div class="work-row">
+                    <a class="work-row-head" href="work/${it.slug}.html"><span class="work-row-title">${esc(it.title)}</span>${tag(it)}</a>
+                    <div class="work-row-more">
+                        <div class="work-row-more-inner">
+                            <div class="work-thumbs">
+${it.thumbs.map(t => `                                <a class="work-thumb" href="work/${it.slug}.html" tabindex="-1" aria-hidden="true">${t}</a>`).join('\n')}
+                            </div>
+                            <a class="work-btn" href="work/${it.slug}.html">explore the whole project ${ARROW}</a>
+                        </div>
+                    </div>
                 </div>`).join('\n');
   return `    <div class="mobile">
 
 ${mobileHeader('', true)}
 
-        <div class="mobile-body-subpage">
+        <div class="mobile-body-subpage mobile-body-work">
 
             <div class="mobile-subpage-title">
                 <p id="mobile-portfolio-title">WORK</p>
             </div>
 
-            <div class="mobile-work">
-                <div class="mobile-work-banner-wrap">
-${list}
-                </div>
+            <div class="work-tiles">
+${tiles}
             </div>
         </div>
 
@@ -224,9 +237,9 @@ ${mobileFooter('', true)}
     <div class="desktop">
 ${desktopNav('', 'work')}
 
-        <div class="desktop-about-container">
-            <div class="desktop-work-banner-wrap">
-${list}
+        <div class="desktop-work-container">
+            <div class="work-list">
+${rows}
             </div>
         </div>
 

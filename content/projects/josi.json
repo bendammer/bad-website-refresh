@@ -1,6 +1,7 @@
 {
   "title": "JOSI Shelter Campaign",
   "label": "JOSI",
+  "category": "campaign",
   "slug": "josi",
   "order": 1,
   "imageDir": "josi",

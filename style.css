@@ -947,3 +947,171 @@ img {
         font-size: 22px;
     }
 }
+
+
+/* WORK PAGE */
+
+.tag {
+    font-size: 13px;
+    line-height: 1.2;
+    color: #444;
+    border: 1px solid #cfcfcf;
+    border-radius: 999px;
+    padding: 5px 14px;
+    white-space: nowrap;
+}
+
+/* mobile: tile grid */
+
+.mobile-body-work {
+    height: auto;
+}
+
+.work-tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 8px 20px 12vh 20px;
+}
+
+.work-tile {
+    display: block;
+}
+
+.work-tile-img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #eee;
+}
+
+.work-tile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.work-tile-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.work-tile-title {
+    font-size: 20px;
+    line-height: 1.3;
+    text-transform: lowercase;
+}
+
+/* desktop: list, a row opens on hover / keyboard focus */
+
+.desktop-work-container {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.work-list {
+    width: 70vw;
+    max-width: 1200px;
+    margin: 0 0 10em 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.work-row {
+    border-top: 1px solid #e3e3e3;
+}
+
+.work-row-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 0;
+}
+
+.work-row-title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: lowercase;
+    border-bottom: 3px solid transparent;
+    transition: border-color .2s ease-in-out;
+}
+
+.work-row:hover .work-row-title,
+.work-row:focus-within .work-row-title {
+    border-bottom-color: rgb(82,235,59);
+}
+
+.work-row-more {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height .45s ease, opacity .3s ease, visibility 0s .45s;
+}
+
+.work-row:hover .work-row-more,
+.work-row:focus-within .work-row-more {
+    max-height: 340px;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.work-row-more-inner {
+    padding: 2px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.work-thumbs {
+    display: flex;
+    gap: 16px;
+}
+
+.work-thumb {
+    flex: 0 1 calc((100% - 48px) / 4);
+    min-width: 0;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eee;
+    display: block;
+}
+
+.work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.work-thumb:hover img {
+    transform: scale(1.05);
+}
+
+.work-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #000;
+    border-radius: 999px;
+    padding: 12px 24px;
+    font-size: 15px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.work-btn:hover,
+.work-btn:focus-visible {
+    background: #000;
+    color: #fff;
+}

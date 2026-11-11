@@ -1,6 +1,7 @@
 {
   "title": "COMCO GMBH",
   "label": "comco gmbh",
+  "category": "corporate",
   "slug": "comco",
   "order": 10,
   "imageDir": "comco",

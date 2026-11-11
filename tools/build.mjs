@@ -57,10 +57,23 @@ emit('portfolio.html', `<!DOCTYPE html>
 `);
 
 // work overview
-const workItems = projData.map(({ p, cover }) => ({
-  slug: p.slug, label: p.label,
-  imgHtml: T.img(cover, { prefix: '', alt: `${p.title} – project preview`, cls: 'banner-img no-lightbox', id: 'portfolio-banner-img', sizes: '85vw' }),
-}));
+const pickPreviews = ({ p, infos }) => {
+  if (p.previews) return p.previews.map(f => infos[p.images.indexOf(f)]).filter(Boolean);
+  const pool = p.images.map((f, i) => i).filter(i => p.images[i] !== p.cover.file);
+  const want = Math.min(3, pool.length);
+  const picks = new Set();
+  for (let k = 0; k < want; k++) picks.add(pool[Math.floor((k + 0.5) * pool.length / want)]);
+  return [...picks].map(i => infos[i]);
+};
+const workItems = projData.map(d => {
+  const { p, cover } = d;
+  const previews = [cover, ...pickPreviews(d)];
+  return {
+    slug: p.slug, title: p.title, category: p.category || '',
+    coverTile: T.img(cover, { prefix: '', alt: `${p.title} – cover photo`, cls: 'no-lightbox', sizes: '(max-width: 770px) 90vw, 450px' }),
+    thumbs: previews.map(inf => T.img(inf, { prefix: '', alt: '', cls: 'no-lightbox', sizes: '280px' })),
+  };
+});
 emit('work.html', T.page({
   prefix: '', current: 'work',
   headHtml: pageHead({ title: 'Work – BAD Photography', description: site.descriptions.work, path: 'work.html', prefix: '', ogImage: projData[0].cover.full }),

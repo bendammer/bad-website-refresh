@@ -1,6 +1,7 @@
 {
   "title": "FRITZ KOLA",
   "label": "fritz kola",
+  "category": "product",
   "slug": "fritzkola",
   "order": 19,
   "imageDir": "fritzkola",

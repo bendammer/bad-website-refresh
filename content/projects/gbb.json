@@ -1,6 +1,7 @@
 {
   "title": "GOLDEN BUMBLEBEE",
   "label": "golden bumblebee",
+  "category": "campaign",
   "slug": "gbb",
   "order": 16,
   "imageDir": "gbb",

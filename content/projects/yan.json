@@ -1,6 +1,7 @@
 {
   "title": "YAN",
   "label": "yan",
+  "category": "portrait",
   "slug": "yan",
   "order": 7,
   "imageDir": "yan",

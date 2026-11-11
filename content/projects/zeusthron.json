@@ -1,6 +1,7 @@
 {
   "title": "ZEUS THRON",
   "label": "zeus thron",
+  "category": "campaign",
   "slug": "zeusthron",
   "order": 13,
   "imageDir": "zeusthron",
