@@ -1280,3 +1280,6 @@ img {
 .desktop-body-project .project-head-desktop { width: 100%; }
 
 .desktop-body-project .project-next { margin-bottom: 6em; }
+
+.home-gallery-wrap { width: 100%; }
+.desktop-body-project .home-gallery-wrap .desktop-portfolio { margin-bottom: 10em; }

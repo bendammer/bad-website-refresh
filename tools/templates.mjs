@@ -138,9 +138,9 @@ ${desktopNav('', 'portfolio')}
 
         <div class="desktop-body-container">
 
-            <div class="desktop-body">
-                <div>
-                    <div class="desktop-portfolio">
+            <div class="desktop-body desktop-body-project">
+                <div class="home-gallery-wrap">
+                    <div class="desktop-portfolio project-gallery">
 ${portfolioImgs}
                     </div>
                 </div>
