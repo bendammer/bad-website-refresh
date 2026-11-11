@@ -1301,3 +1301,9 @@ img {
 
 /* lightbox stage wraps close/photo/counter; on desktop it stays layout-neutral */
 #lightbox .lb-stage { display: contents; }
+
+/* extra room below the last element on project pages (padding is reliable where margins can collapse) */
+.desktop-body-project {
+    padding-bottom: 16em;
+    box-sizing: border-box;
+}
