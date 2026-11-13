@@ -18,17 +18,15 @@ const generated = [];
 const emit = (f, html) => { write(f, html); generated.push(f); };
 
 // ---------- portfolio images
-// hero: portfolio.json "hero" (file name) or else the first landscape image; it is shown first and large on desktop
+// optional hero: only if portfolio.json has a "hero" (file name); it is then shown first and across the full width on desktop
 const pfInfoAll = await Promise.all(portfolio.images.map(f => optimize('portfolio', '', f, imgCfg)));
-let heroIdx = portfolio.hero ? portfolio.images.indexOf(portfolio.hero) : pfInfoAll.findIndex(i => i.w > i.h * 1.2);
-if (heroIdx < 0) heroIdx = 0;
-const pfOrder = [heroIdx, ...pfInfoAll.map((_, i) => i).filter(i => i !== heroIdx)];
+const heroIdx = portfolio.hero ? portfolio.images.indexOf(portfolio.hero) : -1;
+const pfOrder = heroIdx >= 0 ? [heroIdx, ...pfInfoAll.map((_, i) => i).filter(i => i !== heroIdx)] : pfInfoAll.map((_, i) => i);
 const pfInfo = pfOrder.map(i => pfInfoAll[i]);
 const pfFiles = pfOrder.map(i => portfolio.images[i]);
-console.log('Hero image:', pfFiles[0]);
 const pfAlt = i => `BAD Photography portfolio, photo ${i + 1}`;
 const pfImgs = (prefix) => pfInfo.map((info, i) =>
-  '                        ' + T.img(info, { prefix, alt: portfolio.alts?.[pfFiles[i]] || pfAlt(i), cls: i === 0 ? 'hochkant hero' : 'hochkant', eager: i === 0, sizes: i === 0 ? '(max-width: 770px) 92vw, 1000px' : undefined })).join('\n');
+  '                        ' + T.img(info, { prefix, alt: portfolio.alts?.[pfFiles[i]] || pfAlt(i), cls: i === 0 && heroIdx >= 0 ? 'hochkant hero' : 'hochkant', eager: i === 0, sizes: i === 0 && heroIdx >= 0 ? '(max-width: 770px) 92vw, 1000px' : undefined })).join('\n');
 
 // ---------- project images
 const projData = [];
