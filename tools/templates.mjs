@@ -103,7 +103,7 @@ function desktopNav(p, current) {
     const isCur = name === current;
     // the current page is not linked, except on work sub-pages where "work" links back
     const link = (!isCur || p) && !(isCur && !p) ? ` href="${p}${href}"` : '';
-    const a = `                <a class="desktop-navbar-item${isCur ? ' currently-on' : ''}"${link} id="desktop-navbar-item-${name}">${name}</a>`;
+    const a = `                <a class="desktop-navbar-item${isCur ? ' currently-on' : ''}"${link} id="desktop-navbar-item-${name}">${name === 'portfolio' ? 'home' : name}</a>`;
     return name === 'work' && current === 'work' ? a + '\n' + filterNav(p, 'desktop-subnav') : a;
   }).join('\n');
   return `        <div class="desktop-navbar">
@@ -120,7 +120,7 @@ ${links}
 function mobileMenu(p, current) {
   const items = [['portfolio', 'index.html'], ['work', 'work.html'], ['about', 'about.html'], ['contact', 'contact.html']];
   const links = items.map(([name, href]) => {
-    const a = `                <a class="mobile-menu-item${name === current ? ' currently-on' : ''}" href="${p}${href}"${name === current ? ' aria-current="page"' : ''}>${name}</a>`;
+    const a = `                <a class="mobile-menu-item${name === current ? ' currently-on' : ''}" href="${p}${href}"${name === current ? ' aria-current="page"' : ''}>${name === 'portfolio' ? 'home' : name}</a>`;
     return name === 'work' ? a + '\n' + filterNav(p, 'mobile-subnav') : a;
   }).join('\n');
   return `        <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
@@ -197,7 +197,7 @@ ${mobileHeader('', true)}
                 <div class="mobile-portfolio-portrait">
 
                     <div class="mobile-portrait-title">
-                        <p id="mobile-portrait-title">PORTFOLIO</p>
+                        <p id="mobile-portrait-title">HOME</p>
                     </div>
 
                     <div class="mobile-portrait-images">
