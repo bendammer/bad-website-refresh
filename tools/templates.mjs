@@ -10,6 +10,16 @@ const ROOT_DIR = new URL('..', import.meta.url).pathname;
 const ver = f => crypto.createHash('md5').update(fs.readFileSync(ROOT_DIR + f)).digest('hex').slice(0, 8);
 const CSS_V = ver('style.css'), JS_V = ver('index.js');
 
+let CATEGORIES = [];
+export function setCategories(c) { CATEGORIES = c; }
+
+/** category links below "work": filter on the work page, deep links (work.html#cat) from everywhere else */
+function filterNav(p, cls) {
+  const links = ['all', ...CATEGORIES].map(c =>
+    `                    <a class="nav-filter" data-filter="${esc(c)}" href="${p}work.html${c === 'all' ? '' : '#' + encodeURIComponent(c)}">${esc(c)}</a>`).join('\n');
+  return `                <div class="${cls}" aria-label="Work categories">\n${links}\n                </div>`;
+}
+
 const SIZES = '(max-width: 770px) 92vw, 650px';
 
 /** <img> with responsive webp, intrinsic size, alt and native lazy loading */
@@ -93,7 +103,8 @@ function desktopNav(p, current) {
     const isCur = name === current;
     // the current page is not linked, except on work sub-pages where "work" links back
     const link = (!isCur || p) && !(isCur && !p) ? ` href="${p}${href}"` : '';
-    return `                <a class="desktop-navbar-item${isCur ? ' currently-on' : ''}"${link} id="desktop-navbar-item-${name}">${name}</a>`;
+    const a = `                <a class="desktop-navbar-item${isCur ? ' currently-on' : ''}"${link} id="desktop-navbar-item-${name}">${name}</a>`;
+    return name === 'work' && current === 'work' ? a + '\n' + filterNav(p, 'desktop-subnav') : a;
   }).join('\n');
   return `        <div class="desktop-navbar">
             <div class="desktop-badlogo">
@@ -108,8 +119,10 @@ ${links}
 /** Hamburger button + full-screen menu for the mobile layout (styled like the desktop menu) */
 function mobileMenu(p, current) {
   const items = [['portfolio', 'index.html'], ['work', 'work.html'], ['about', 'about.html'], ['contact', 'contact.html']];
-  const links = items.map(([name, href]) =>
-    `                <a class="mobile-menu-item${name === current ? ' currently-on' : ''}" href="${p}${href}"${name === current ? ' aria-current="page"' : ''}>${name}</a>`).join('\n');
+  const links = items.map(([name, href]) => {
+    const a = `                <a class="mobile-menu-item${name === current ? ' currently-on' : ''}" href="${p}${href}"${name === current ? ' aria-current="page"' : ''}>${name}</a>`;
+    return name === 'work' ? a + '\n' + filterNav(p, 'mobile-subnav') : a;
+  }).join('\n');
   return `        <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
         <nav class="mobile-menu" id="mobile-menu" aria-label="Main menu">
             <div class="mobile-menu-items">
@@ -221,10 +234,6 @@ const ARROW = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true
 /** Work overview: tile grid on mobile, list with hover-expand on desktop. items: {slug,title,category,coverHtml,thumbsHtml[]} */
 export function workBody({ items }) {
   const tag = it => it.category ? `<span class="tag">${esc(it.category)}</span>` : '';
-  const cats = [...new Set(items.map(it => it.category).filter(Boolean))];
-  const filter = `<div class="work-filter" role="group" aria-label="Filter by category">
-${['all', ...cats].map((c, i) => `                    <button type="button" class="work-filter-btn${i === 0 ? ' active' : ''}" data-filter="${esc(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join('\n')}
-                </div>`;
   const tiles = items.map(it => `                <a class="work-tile" href="work/${it.slug}.html" data-category="${esc(it.category)}">
                     <div class="work-tile-img">${it.coverTile}</div>
                     <div class="work-tile-meta"><span class="work-tile-title">${esc(it.title)}</span>${tag(it)}</div>
@@ -250,8 +259,6 @@ ${mobileHeader('', true)}
                 <p id="mobile-portfolio-title">WORK</p>
             </div>
 
-            ${filter}
-
             <div class="work-tiles">
 ${tiles}
             </div>
@@ -264,7 +271,6 @@ ${mobileFooter('', true)}
 ${desktopNav('', 'work')}
 
         <div class="desktop-work-container">
-            ${filter}
             <div class="work-list">
 ${rows}
             </div>

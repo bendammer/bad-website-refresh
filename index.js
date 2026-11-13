@@ -113,32 +113,39 @@
 })();
 
 
-/* ---------- Work page: category filter ---------- */
+/* ---------- Work page: category filter (driven by the menu links under "work") ---------- */
 (function () {
-  const bars = document.querySelectorAll('.work-filter');
-  if (!bars.length) return;
+  const links = document.querySelectorAll('.nav-filter');
+  const list = document.querySelector('.work-list');
+  if (!links.length || !list) return;      // only on work.html
   const items = document.querySelectorAll('.work-tile, .work-row');
+  const known = Array.from(new Set(Array.from(links).map(l => l.dataset.filter)));
 
   function apply(cat) {
-    bars.forEach(bar => bar.querySelectorAll('.work-filter-btn').forEach(btn => {
-      const on = btn.dataset.filter === cat;
-      btn.classList.toggle('active', on);
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    }));
+    links.forEach(l => {
+      const on = l.dataset.filter === cat;
+      l.classList.toggle('active', on);
+      if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+    });
     items.forEach(it => { it.hidden = cat !== 'all' && it.dataset.category !== cat; });
   }
 
-  bars.forEach(bar => bar.addEventListener('click', e => {
-    const btn = e.target.closest('.work-filter-btn');
-    if (!btn) return;
-    const cat = btn.dataset.filter;
+  links.forEach(l => l.addEventListener('click', e => {
+    e.preventDefault();
+    const cat = l.dataset.filter;
     apply(cat);
     history.replaceState(null, '', cat === 'all' ? location.pathname + location.search : '#' + encodeURIComponent(cat));
+    const toggle = document.querySelector('.menu-toggle');
+    if (toggle && toggle.getAttribute('aria-expanded') === 'true') toggle.click();   // close the mobile menu
+    window.scrollTo({ top: 0 });
   }));
 
   const fromHash = decodeURIComponent(location.hash.slice(1));
-  const known = Array.from(bars[0].querySelectorAll('.work-filter-btn')).map(b => b.dataset.filter);
-  if (fromHash && known.includes(fromHash)) apply(fromHash);
+  apply(known.includes(fromHash) ? fromHash : 'all');
+  window.addEventListener('hashchange', () => {
+    const h = decodeURIComponent(location.hash.slice(1));
+    apply(known.includes(h) ? h : 'all');
+  });
 })();
 
 /* ---------- Soft reveal on scroll ---------- */

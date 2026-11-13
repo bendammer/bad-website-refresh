@@ -13,6 +13,7 @@ const portfolio = readJson('content/portfolio.json');
 const projects = fs.readdirSync(path.join(ROOT, 'content/projects')).filter(f => f.endsWith('.json'))
   .map(f => readJson('content/projects/' + f)).sort((a, b) => a.order - b.order);
 const imgCfg = site.image;
+T.setCategories([...new Set(projects.map(p => p.category).filter(Boolean))]);
 const generated = [];
 const emit = (f, html) => { write(f, html); generated.push(f); };
 

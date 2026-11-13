@@ -1318,58 +1318,45 @@ img {
     object-fit: cover;
 }
 
-/* CATEGORY FILTER (work page) */
+/* CATEGORY LINKS IN THE MENU (below "work") */
 
-.work-filter {
-    display: none;
+.desktop-subnav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 4px 0 6px 12px;
 }
 
-html.js .work-filter {
+.nav-filter {
+    font-size: 14px;
+    text-transform: lowercase;
+    color: #6b6b6b;
+    text-decoration: none;
+    transition: transform .2s ease-in-out, color .2s ease-in-out;
+}
+
+.nav-filter:hover,
+.nav-filter:focus-visible {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.nav-filter.active {
+    color: rgb(82,235,59);
+}
+
+.mobile-subnav {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 4px 18px;
+    max-width: 320px;
+    margin: -4px 0 8px 14px;
 }
 
-.work-filter-btn {
-    font-family: Saira, sans-serif;
-    font-size: 14px;
-    line-height: 1.2;
-    text-transform: lowercase;
-    color: #444;
-    background: transparent;
-    border: 1px solid #cfcfcf;
-    border-radius: 999px;
-    padding: 7px 16px;
-    cursor: pointer;
-    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
-    -webkit-tap-highlight-color: transparent;
-}
-
-@media (hover: hover) {
-    .work-filter-btn:hover {
-        border-color: rgb(82,235,59);
-        color: #000;
-    }
-}
-
-.work-filter-btn.active {
-    color: #000;
-    border-color: rgb(82,235,59);
-    background-color: rgba(82,235,59,.14);
-}
-
-.work-filter-btn:focus-visible {
-    outline: 2px solid rgb(82,235,59);
-    outline-offset: 2px;
-}
-
-.mobile-body-work .work-filter {
-    justify-content: center;
-    padding: 0 20px 20px 20px;
-}
-
-.desktop-work-container .work-filter {
-    margin: 0 0 18px 0;
+.mobile-subnav .nav-filter {
+    font-size: 17px;
 }
 
 .work-tile[hidden],
