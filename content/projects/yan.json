@@ -6,7 +6,8 @@
   "order": 7,
   "imageDir": "yan",
   "cover": {
-    "legacy": "images/banner/banner_yan.jpg"
+    "dir": "yan",
+    "file": "BAD_Yan_FuenfZwo_027.jpg"
   },
   "videos": [],
   "images": [

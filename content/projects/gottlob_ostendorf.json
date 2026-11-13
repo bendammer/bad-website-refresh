@@ -6,7 +6,8 @@
   "order": 9,
   "imageDir": "gottlob_ostendorf",
   "cover": {
-    "legacy": "images/banner/banner_gottlob_ostendorf.jpg"
+    "dir": "gottlob_ostendorf",
+    "file": "BAD_gottlob_ostendorf_002.jpg"
   },
   "videos": [],
   "images": [

@@ -6,7 +6,8 @@
   "order": 15,
   "imageDir": "stadtstrand",
   "cover": {
-    "legacy": "images/banner/banner_stadtstrand.jpg"
+    "dir": "stadtstrand",
+    "file": "BAD_Stadtstrand_001.jpg"
   },
   "videos": [],
   "images": [

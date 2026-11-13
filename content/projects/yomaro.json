@@ -6,7 +6,8 @@
   "order": 14,
   "imageDir": "yomaro",
   "cover": {
-    "legacy": "images/banner/banner_yomaro.jpg"
+    "dir": "yomaro",
+    "file": "BAD_Yomaro_004.jpg"
   },
   "videos": [
     "Yomaro_1_Video.mp4"

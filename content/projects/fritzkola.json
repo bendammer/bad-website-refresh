@@ -6,7 +6,8 @@
   "order": 19,
   "imageDir": "fritzkola",
   "cover": {
-    "legacy": "images/banner/banner_fritzkola.jpg"
+    "dir": "fritzkola",
+    "file": "BAD_FritzKola_005.jpg"
   },
   "videos": [],
   "images": [

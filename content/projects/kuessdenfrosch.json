@@ -6,7 +6,8 @@
   "order": 12,
   "imageDir": "kuessdenfrosch",
   "cover": {
-    "legacy": "images/banner/banner_kuessdenfrosch.jpg"
+    "dir": "kuessdenfrosch",
+    "file": "BAD_BilkerBunker_5_007.jpg"
   },
   "videos": [],
   "images": [

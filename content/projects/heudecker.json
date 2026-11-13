@@ -6,7 +6,8 @@
   "order": 18,
   "imageDir": "heudecker",
   "cover": {
-    "legacy": "images/banner/banner_heudecker.jpg"
+    "dir": "heudecker",
+    "file": "BAD_Heudecker_006.jpg"
   },
   "videos": [],
   "images": [

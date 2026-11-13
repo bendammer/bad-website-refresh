@@ -6,7 +6,8 @@
   "order": 8,
   "imageDir": "Final4_2023",
   "cover": {
-    "legacy": "images/banner/banner_final4.jpg"
+    "dir": "Final4_2023",
+    "file": "BAD_Final4_2023_018.jpg"
   },
   "videos": [
     "final4.recap.m4v"
