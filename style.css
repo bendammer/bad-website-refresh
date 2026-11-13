@@ -1307,3 +1307,88 @@ img {
     padding-bottom: 16em;
     box-sizing: border-box;
 }
+
+
+/* HERO (desktop homepage): first image across the full gallery width */
+
+.desktop-portfolio.project-gallery img.hero {
+    flex: 1 1 100%;
+    width: 100%;
+    max-height: 78vh;
+    object-fit: cover;
+}
+
+/* CATEGORY FILTER (work page) */
+
+.work-filter {
+    display: none;
+}
+
+html.js .work-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.work-filter-btn {
+    font-family: Saira, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: lowercase;
+    color: #444;
+    background: transparent;
+    border: 1px solid #cfcfcf;
+    border-radius: 999px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+    .work-filter-btn:hover {
+        border-color: rgb(82,235,59);
+        color: #000;
+    }
+}
+
+.work-filter-btn.active {
+    color: #000;
+    border-color: rgb(82,235,59);
+    background-color: rgba(82,235,59,.14);
+}
+
+.work-filter-btn:focus-visible {
+    outline: 2px solid rgb(82,235,59);
+    outline-offset: 2px;
+}
+
+.mobile-body-work .work-filter {
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+}
+
+.desktop-work-container .work-filter {
+    margin: 0 0 18px 0;
+}
+
+.work-tile[hidden],
+.work-row[hidden] {
+    display: none;
+}
+
+/* SOFT REVEAL ON SCROLL (only when JS runs; skipped for reduced motion) */
+
+@media (prefers-reduced-motion: no-preference) {
+    html.js .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity .8s ease, transform .8s ease;
+        transition-delay: var(--reveal-delay, 0ms);
+    }
+
+    html.js .reveal.in {
+        opacity: 1;
+        transform: none;
+    }
+}

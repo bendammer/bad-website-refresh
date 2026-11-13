@@ -19,7 +19,8 @@ export function justify(html) {
   return html.replace(/<(img|video)\b([^>]*)>/g, (m, tag, attrs) => {
     const w = /\bwidth="(\d+)"/.exec(attrs), h = /\bheight="(\d+)"/.exec(attrs);
     const r = tag === 'video' || !w || !h ? 16 / 9 : (+w[1]) / (+h[1]);
-    const style = `flex:${r.toFixed(3)} 1 ${Math.round(r * ROW_H)}px`;
+    const hero = /class="[^"]*\bhero\b/.test(attrs);
+    const style = hero ? 'flex:1 1 100%' : `flex:${r.toFixed(3)} 1 ${Math.round(r * ROW_H)}px`;
     return `<${tag}${attrs} style="${style}">`;
   });
 }
@@ -47,6 +48,7 @@ export function head({ title, description, path, prefix, site, ogImage }) {
   return `<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <link rel="canonical" href="${url}">
@@ -219,11 +221,15 @@ const ARROW = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true
 /** Work overview: tile grid on mobile, list with hover-expand on desktop. items: {slug,title,category,coverHtml,thumbsHtml[]} */
 export function workBody({ items }) {
   const tag = it => it.category ? `<span class="tag">${esc(it.category)}</span>` : '';
-  const tiles = items.map(it => `                <a class="work-tile" href="work/${it.slug}.html">
+  const cats = [...new Set(items.map(it => it.category).filter(Boolean))];
+  const filter = `<div class="work-filter" role="group" aria-label="Filter by category">
+${['all', ...cats].map((c, i) => `                    <button type="button" class="work-filter-btn${i === 0 ? ' active' : ''}" data-filter="${esc(c)}" aria-pressed="${i === 0}">${esc(c)}</button>`).join('\n')}
+                </div>`;
+  const tiles = items.map(it => `                <a class="work-tile" href="work/${it.slug}.html" data-category="${esc(it.category)}">
                     <div class="work-tile-img">${it.coverTile}</div>
                     <div class="work-tile-meta"><span class="work-tile-title">${esc(it.title)}</span>${tag(it)}</div>
                 </a>`).join('\n');
-  const rows = items.map(it => `                <div class="work-row">
+  const rows = items.map(it => `                <div class="work-row" data-category="${esc(it.category)}">
                     <a class="work-row-head" href="work/${it.slug}.html"><span class="work-row-title">${esc(it.title)}</span>${tag(it)}</a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -244,6 +250,8 @@ ${mobileHeader('', true)}
                 <p id="mobile-portfolio-title">WORK</p>
             </div>
 
+            ${filter}
+
             <div class="work-tiles">
 ${tiles}
             </div>
@@ -256,6 +264,7 @@ ${mobileFooter('', true)}
 ${desktopNav('', 'work')}
 
         <div class="desktop-work-container">
+            ${filter}
             <div class="work-list">
 ${rows}
             </div>

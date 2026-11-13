@@ -111,3 +111,54 @@
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(index + (dx < 0 ? 1 : -1));
   }, { passive: true });
 })();
+
+
+/* ---------- Work page: category filter ---------- */
+(function () {
+  const bars = document.querySelectorAll('.work-filter');
+  if (!bars.length) return;
+  const items = document.querySelectorAll('.work-tile, .work-row');
+
+  function apply(cat) {
+    bars.forEach(bar => bar.querySelectorAll('.work-filter-btn').forEach(btn => {
+      const on = btn.dataset.filter === cat;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }));
+    items.forEach(it => { it.hidden = cat !== 'all' && it.dataset.category !== cat; });
+  }
+
+  bars.forEach(bar => bar.addEventListener('click', e => {
+    const btn = e.target.closest('.work-filter-btn');
+    if (!btn) return;
+    const cat = btn.dataset.filter;
+    apply(cat);
+    history.replaceState(null, '', cat === 'all' ? location.pathname + location.search : '#' + encodeURIComponent(cat));
+  }));
+
+  const fromHash = decodeURIComponent(location.hash.slice(1));
+  const known = Array.from(bars[0].querySelectorAll('.work-filter-btn')).map(b => b.dataset.filter);
+  if (fromHash && known.includes(fromHash)) apply(fromHash);
+})();
+
+/* ---------- Soft reveal on scroll ---------- */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const targets = document.querySelectorAll(
+    '.desktop-portfolio img, .desktop-portfolio video, .mobile-home-images img, .mobile-project-images img, .mobile-project-images video, .mobile-project-images .project-desc, .work-tile, .work-row, .project-next'
+  );
+  const io = new IntersectionObserver(entries => {
+    let n = 0;
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.style.setProperty('--reveal-delay', Math.min(n++, 5) * 70 + 'ms');
+      el.classList.add('in');
+      io.unobserve(el);
+      // drop the delay once shown so hover effects stay snappy
+      setTimeout(() => el.style.removeProperty('--reveal-delay'), 1400);
+    });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+  targets.forEach(el => { el.classList.add('reveal'); io.observe(el); });
+})();

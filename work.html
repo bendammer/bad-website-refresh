@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title>Work – BAD Photography</title>
   <meta name="description" content="Commissioned photography projects by BAD Photography: events, brands, campaigns and weddings in Düsseldorf and beyond.">
   <link rel="canonical" href="https://benaarondammer.studio/work.html">
@@ -15,7 +16,7 @@
   <meta property="og:image" content="https://benaarondammer.studio/images/optimized/work/josi/Josi_Shelter_Campaign_web_013-1000.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://benaarondammer.studio/images/optimized/work/josi/Josi_Shelter_Campaign_web_013-1000.webp">
-  <link rel="stylesheet" href="style.css?v=4f68bbf2">
+  <link rel="stylesheet" href="style.css?v=d7b91f16">
   <link rel="shortcut icon" type="image/x-icon" href="images/logos/default.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,80 +49,92 @@
                 <p id="mobile-portfolio-title">WORK</p>
             </div>
 
+            <div class="work-filter" role="group" aria-label="Filter by category">
+                    <button type="button" class="work-filter-btn active" data-filter="all" aria-pressed="true">all</button>
+                    <button type="button" class="work-filter-btn" data-filter="campaign" aria-pressed="false">campaign</button>
+                    <button type="button" class="work-filter-btn" data-filter="sports" aria-pressed="false">sports</button>
+                    <button type="button" class="work-filter-btn" data-filter="wedding" aria-pressed="false">wedding</button>
+                    <button type="button" class="work-filter-btn" data-filter="portrait" aria-pressed="false">portrait</button>
+                    <button type="button" class="work-filter-btn" data-filter="lifestyle" aria-pressed="false">lifestyle</button>
+                    <button type="button" class="work-filter-btn" data-filter="corporate" aria-pressed="false">corporate</button>
+                    <button type="button" class="work-filter-btn" data-filter="architecture" aria-pressed="false">architecture</button>
+                    <button type="button" class="work-filter-btn" data-filter="product" aria-pressed="false">product</button>
+                </div>
+
             <div class="work-tiles">
-                <a class="work-tile" href="work/josi.html">
+                <a class="work-tile" href="work/josi.html" data-category="campaign">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/josi/Josi_Shelter_Campaign_web_013-1000.webp" srcset="images/optimized/work/josi/Josi_Shelter_Campaign_web_013-500.webp 500w, images/optimized/work/josi/Josi_Shelter_Campaign_web_013-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1500" height="1000" alt="JOSERA – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/josi/Josi_Shelter_Campaign_web_013-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">JOSERA</span><span class="tag">campaign</span></div>
                 </a>
-                <a class="work-tile" href="work/tour_de_neuss_2024.html">
+                <a class="work-tile" href="work/tour_de_neuss_2024.html" data-category="sports">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/tour-de-neuss_2024/Tour_de_Neuss_2024_web_011-1000.webp" srcset="images/optimized/work/tour-de-neuss_2024/Tour_de_Neuss_2024_web_011-500.webp 500w, images/optimized/work/tour-de-neuss_2024/Tour_de_Neuss_2024_web_011-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1500" height="543" alt="Tour de Neuss 2024 – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/tour-de-neuss_2024/Tour_de_Neuss_2024_web_011-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">Tour de Neuss 2024</span><span class="tag">sports</span></div>
                 </a>
-                <a class="work-tile" href="work/Final4_2024.html">
+                <a class="work-tile" href="work/Final4_2024.html" data-category="sports">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/Final4_Halle_2024/BAD_Final4_Halle_2024_016-1000.webp" srcset="images/optimized/work/Final4_Halle_2024/BAD_Final4_Halle_2024_016-500.webp 500w, images/optimized/work/Final4_Halle_2024/BAD_Final4_Halle_2024_016-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1000" height="661" alt="FINAL4 2024 – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/Final4_Halle_2024/BAD_Final4_Halle_2024_016-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">FINAL4 2024</span><span class="tag">sports</span></div>
                 </a>
-                <a class="work-tile" href="work/paulina_henry.html">
+                <a class="work-tile" href="work/paulina_henry.html" data-category="wedding">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/Paulina_Henry/BAD_Paulina_Henry_031-1000.webp" srcset="images/optimized/work/Paulina_Henry/BAD_Paulina_Henry_031-500.webp 500w, images/optimized/work/Paulina_Henry/BAD_Paulina_Henry_031-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1000" height="667" alt="Paulina &amp; Henry – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/Paulina_Henry/BAD_Paulina_Henry_031-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">Paulina &amp; Henry</span><span class="tag">wedding</span></div>
                 </a>
-                <a class="work-tile" href="work/die_finals_2023.html">
+                <a class="work-tile" href="work/die_finals_2023.html" data-category="sports">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/Die_Finals_2023/BAD_Die_Finals_2023_019-1000.webp" srcset="images/optimized/work/Die_Finals_2023/BAD_Die_Finals_2023_019-500.webp 500w, images/optimized/work/Die_Finals_2023/BAD_Die_Finals_2023_019-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1000" height="667" alt="Die Finals 2023 – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/Die_Finals_2023/BAD_Die_Finals_2023_019-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">Die Finals 2023</span><span class="tag">sports</span></div>
                 </a>
-                <a class="work-tile" href="work/pia_patrick.html">
+                <a class="work-tile" href="work/pia_patrick.html" data-category="wedding">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/work/patrick_pia/BAD_Patrick_Pia_016-1000.webp" srcset="images/optimized/work/patrick_pia/BAD_Patrick_Pia_016-500.webp 500w, images/optimized/work/patrick_pia/BAD_Patrick_Pia_016-1000.webp 1000w" sizes="(max-width: 770px) 90vw, 450px" width="1000" height="640" alt="Pia &amp; Patrick – cover photo" loading="lazy" decoding="async" data-full="images/optimized/work/patrick_pia/BAD_Patrick_Pia_016-1000.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">Pia &amp; Patrick</span><span class="tag">wedding</span></div>
                 </a>
-                <a class="work-tile" href="work/yan.html">
+                <a class="work-tile" href="work/yan.html" data-category="portrait">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_yan-800.webp" srcset="images/optimized/banner/banner_yan-500.webp 500w, images/optimized/banner/banner_yan-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="YAN – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_yan-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">YAN</span><span class="tag">portrait</span></div>
                 </a>
-                <a class="work-tile" href="work/final4.html">
+                <a class="work-tile" href="work/final4.html" data-category="sports">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_final4-800.webp" srcset="images/optimized/banner/banner_final4-500.webp 500w, images/optimized/banner/banner_final4-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="437" alt="FINAL4 2023 – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_final4-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">FINAL4 2023</span><span class="tag">sports</span></div>
                 </a>
-                <a class="work-tile" href="work/gottlob_ostendorf.html">
+                <a class="work-tile" href="work/gottlob_ostendorf.html" data-category="lifestyle">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_gottlob_ostendorf-800.webp" srcset="images/optimized/banner/banner_gottlob_ostendorf-500.webp 500w, images/optimized/banner/banner_gottlob_ostendorf-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="534" alt="GOTTLOB + OSTENDORF – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_gottlob_ostendorf-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">GOTTLOB + OSTENDORF</span><span class="tag">lifestyle</span></div>
                 </a>
-                <a class="work-tile" href="work/comco.html">
+                <a class="work-tile" href="work/comco.html" data-category="corporate">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_comco-800.webp" srcset="images/optimized/banner/banner_comco-500.webp 500w, images/optimized/banner/banner_comco-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="533" alt="COMCO GMBH – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_comco-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">COMCO GMBH</span><span class="tag">corporate</span></div>
                 </a>
-                <a class="work-tile" href="work/complective.html">
+                <a class="work-tile" href="work/complective.html" data-category="lifestyle">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_complective-800.webp" srcset="images/optimized/banner/banner_complective-500.webp 500w, images/optimized/banner/banner_complective-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="COMPLECTIVE – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_complective-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">COMPLECTIVE</span><span class="tag">lifestyle</span></div>
                 </a>
-                <a class="work-tile" href="work/kuessdenfrosch.html">
+                <a class="work-tile" href="work/kuessdenfrosch.html" data-category="architecture">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_kuessdenfrosch-800.webp" srcset="images/optimized/banner/banner_kuessdenfrosch-500.webp 500w, images/optimized/banner/banner_kuessdenfrosch-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="KUESSDENFROSCH – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_kuessdenfrosch-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">KUESSDENFROSCH</span><span class="tag">architecture</span></div>
                 </a>
-                <a class="work-tile" href="work/zeusthron.html">
+                <a class="work-tile" href="work/zeusthron.html" data-category="campaign">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_zeus-800.webp" srcset="images/optimized/banner/banner_zeus-500.webp 500w, images/optimized/banner/banner_zeus-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="ZEUS THRON – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_zeus-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">ZEUS THRON</span><span class="tag">campaign</span></div>
                 </a>
-                <a class="work-tile" href="work/yomaro.html">
+                <a class="work-tile" href="work/yomaro.html" data-category="product">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_yomaro-800.webp" srcset="images/optimized/banner/banner_yomaro-500.webp 500w, images/optimized/banner/banner_yomaro-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="YOMARO – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_yomaro-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">YOMARO</span><span class="tag">product</span></div>
                 </a>
-                <a class="work-tile" href="work/stadtstrand.html">
+                <a class="work-tile" href="work/stadtstrand.html" data-category="lifestyle">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_stadtstrand-800.webp" srcset="images/optimized/banner/banner_stadtstrand-500.webp 500w, images/optimized/banner/banner_stadtstrand-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="STADTSTRAND DUESSELDORF – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_stadtstrand-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">STADTSTRAND DUESSELDORF</span><span class="tag">lifestyle</span></div>
                 </a>
-                <a class="work-tile" href="work/gbb.html">
+                <a class="work-tile" href="work/gbb.html" data-category="campaign">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_gbb-800.webp" srcset="images/optimized/banner/banner_gbb-500.webp 500w, images/optimized/banner/banner_gbb-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="GOLDEN BUMBLEBEE – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_gbb-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">GOLDEN BUMBLEBEE</span><span class="tag">campaign</span></div>
                 </a>
-                <a class="work-tile" href="work/ava.html">
+                <a class="work-tile" href="work/ava.html" data-category="corporate">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_ava-800.webp" srcset="images/optimized/banner/banner_ava-500.webp 500w, images/optimized/banner/banner_ava-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="AVA GMBH – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_ava-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">AVA GMBH</span><span class="tag">corporate</span></div>
                 </a>
-                <a class="work-tile" href="work/heudecker.html">
+                <a class="work-tile" href="work/heudecker.html" data-category="lifestyle">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_heudecker-800.webp" srcset="images/optimized/banner/banner_heudecker-500.webp 500w, images/optimized/banner/banner_heudecker-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="HEUDECKER – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_heudecker-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">HEUDECKER</span><span class="tag">lifestyle</span></div>
                 </a>
-                <a class="work-tile" href="work/fritzkola.html">
+                <a class="work-tile" href="work/fritzkola.html" data-category="product">
                     <div class="work-tile-img"><img class="no-lightbox" src="images/optimized/banner/banner_fritzkola-800.webp" srcset="images/optimized/banner/banner_fritzkola-500.webp 500w, images/optimized/banner/banner_fritzkola-800.webp 800w" sizes="(max-width: 770px) 90vw, 450px" width="800" height="500" alt="FRITZ KOLA – cover photo" loading="lazy" decoding="async" data-full="images/optimized/banner/banner_fritzkola-800.webp"></div>
                     <div class="work-tile-meta"><span class="work-tile-title">FRITZ KOLA</span><span class="tag">product</span></div>
                 </a>
@@ -148,8 +161,19 @@
         </div>
 
         <div class="desktop-work-container">
+            <div class="work-filter" role="group" aria-label="Filter by category">
+                    <button type="button" class="work-filter-btn active" data-filter="all" aria-pressed="true">all</button>
+                    <button type="button" class="work-filter-btn" data-filter="campaign" aria-pressed="false">campaign</button>
+                    <button type="button" class="work-filter-btn" data-filter="sports" aria-pressed="false">sports</button>
+                    <button type="button" class="work-filter-btn" data-filter="wedding" aria-pressed="false">wedding</button>
+                    <button type="button" class="work-filter-btn" data-filter="portrait" aria-pressed="false">portrait</button>
+                    <button type="button" class="work-filter-btn" data-filter="lifestyle" aria-pressed="false">lifestyle</button>
+                    <button type="button" class="work-filter-btn" data-filter="corporate" aria-pressed="false">corporate</button>
+                    <button type="button" class="work-filter-btn" data-filter="architecture" aria-pressed="false">architecture</button>
+                    <button type="button" class="work-filter-btn" data-filter="product" aria-pressed="false">product</button>
+                </div>
             <div class="work-list">
-                <div class="work-row">
+                <div class="work-row" data-category="campaign">
                     <a class="work-row-head" href="work/josi.html"><span class="work-row-title">JOSERA</span><span class="tag">campaign</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -163,7 +187,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="sports">
                     <a class="work-row-head" href="work/tour_de_neuss_2024.html"><span class="work-row-title">Tour de Neuss 2024</span><span class="tag">sports</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -177,7 +201,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="sports">
                     <a class="work-row-head" href="work/Final4_2024.html"><span class="work-row-title">FINAL4 2024</span><span class="tag">sports</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -191,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="wedding">
                     <a class="work-row-head" href="work/paulina_henry.html"><span class="work-row-title">Paulina &amp; Henry</span><span class="tag">wedding</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -205,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="sports">
                     <a class="work-row-head" href="work/die_finals_2023.html"><span class="work-row-title">Die Finals 2023</span><span class="tag">sports</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -219,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="wedding">
                     <a class="work-row-head" href="work/pia_patrick.html"><span class="work-row-title">Pia &amp; Patrick</span><span class="tag">wedding</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -233,7 +257,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="portrait">
                     <a class="work-row-head" href="work/yan.html"><span class="work-row-title">YAN</span><span class="tag">portrait</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -247,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="sports">
                     <a class="work-row-head" href="work/final4.html"><span class="work-row-title">FINAL4 2023</span><span class="tag">sports</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -261,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="lifestyle">
                     <a class="work-row-head" href="work/gottlob_ostendorf.html"><span class="work-row-title">GOTTLOB + OSTENDORF</span><span class="tag">lifestyle</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -275,7 +299,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="corporate">
                     <a class="work-row-head" href="work/comco.html"><span class="work-row-title">COMCO GMBH</span><span class="tag">corporate</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -289,7 +313,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="lifestyle">
                     <a class="work-row-head" href="work/complective.html"><span class="work-row-title">COMPLECTIVE</span><span class="tag">lifestyle</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -303,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="architecture">
                     <a class="work-row-head" href="work/kuessdenfrosch.html"><span class="work-row-title">KUESSDENFROSCH</span><span class="tag">architecture</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -317,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="campaign">
                     <a class="work-row-head" href="work/zeusthron.html"><span class="work-row-title">ZEUS THRON</span><span class="tag">campaign</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -331,7 +355,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="product">
                     <a class="work-row-head" href="work/yomaro.html"><span class="work-row-title">YOMARO</span><span class="tag">product</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -345,7 +369,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="lifestyle">
                     <a class="work-row-head" href="work/stadtstrand.html"><span class="work-row-title">STADTSTRAND DUESSELDORF</span><span class="tag">lifestyle</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -359,7 +383,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="campaign">
                     <a class="work-row-head" href="work/gbb.html"><span class="work-row-title">GOLDEN BUMBLEBEE</span><span class="tag">campaign</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -373,7 +397,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="corporate">
                     <a class="work-row-head" href="work/ava.html"><span class="work-row-title">AVA GMBH</span><span class="tag">corporate</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -387,7 +411,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="lifestyle">
                     <a class="work-row-head" href="work/heudecker.html"><span class="work-row-title">HEUDECKER</span><span class="tag">lifestyle</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -401,7 +425,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-row">
+                <div class="work-row" data-category="product">
                     <a class="work-row-head" href="work/fritzkola.html"><span class="work-row-title">FRITZ KOLA</span><span class="tag">product</span></a>
                     <div class="work-row-more">
                         <div class="work-row-more-inner">
@@ -424,7 +448,7 @@
         </div>
     </div>
 
-    <script src="index.js?v=3bef7bdc"></script>
+    <script src="index.js?v=5c854e94"></script>
 </body>
 
 </html>
