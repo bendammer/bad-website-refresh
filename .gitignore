@@ -3,3 +3,4 @@ node_modules/
 source/
 *.log
 tools/picker/
+_to_delete/
