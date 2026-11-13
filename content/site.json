@@ -7,7 +7,8 @@
   "image": {
     "widths": [
       500,
-      1000
+      1000,
+      1600
     ],
     "quality": 82
   },
@@ -16,5 +17,12 @@
     "work": "Commissioned photography projects by BAD Photography: events, brands, campaigns and weddings in Düsseldorf and beyond.",
     "about": "About Ben Aaron Dammer, freelance photographer in Düsseldorf and founder of BAD Photography.",
     "contact": "Contact Ben Aaron Dammer (BAD Photography) for photography projects, bookings and collaborations."
-  }
+  },
+  "categories": [
+    "wedding",
+    "sports",
+    "campaign",
+    "corporate",
+    "lifestyle"
+  ]
 }

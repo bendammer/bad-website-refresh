@@ -1,0 +1,38 @@
+{
+  "title": "LCC TakeOver",
+  "label": "lcc takeover",
+  "category": "sports",
+  "slug": "lcc_takeover",
+  "order": 0,
+  "imageDir": "lcc_takeover",
+  "cover": {
+    "dir": "lcc_takeover",
+    "file": "Takeover_2025_LCC_007.jpg"
+  },
+  "videos": [],
+  "images": [
+    "Takeover_2025_LCC_007.jpg",
+    "Takeover_2025_LCC_061.jpg",
+    "Takeover_2025_LCC_093.jpg",
+    "Takeover_2025_LCC_099.jpg",
+    "Takeover_2025_LCC_104.jpg",
+    "Takeover_2025_LCC_113.jpg",
+    "Takeover_2025_LCC_124.jpg",
+    "Takeover_2025_LCC_162.jpg",
+    "Takeover_2025_LCC_157.jpg",
+    "Takeover_2025_LCC_180.jpg",
+    "Takeover_2025_LCC_167.jpg",
+    "Takeover_2025_LCC_195.jpg",
+    "Takeover_2025_LCC_197.jpg",
+    "Takeover_2025_LCC_223.jpg",
+    "Takeover_2025_LCC_031.jpg",
+    "Takeover_2025_LCC_010.jpg",
+    "Takeover_2025_LCC_014.jpg",
+    "Takeover_2025_LCC_038.jpg",
+    "Takeover_2025_LCC_183.jpg",
+    "Takeover_2025_LCC_186.jpg",
+    "Takeover_2025_LCC_202.jpg",
+    "Takeover_2025_LCC_207.jpg",
+    "Takeover_2025_LCC_220.jpg"
+  ]
+}

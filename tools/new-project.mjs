@@ -1,3 +1,4 @@
+// With a selection from the picker page: node tools/new-project.mjs "Title" /path/to/photos --picks picks.txt --category sports [--slug s]
 // Add a new project: node tools/new-project.mjs "Title" /path/to/photos [--cover 3] [--label "short name"] [--slug my-slug]
 // Copies the photos to source/work/<slug>/ (not committed), writes content/projects/<slug>.json and rebuilds the site.
 import fs from 'fs';
@@ -7,7 +8,7 @@ import { ROOT } from './images.mjs';
 
 const args = process.argv.slice(2);
 const opt = n => { const i = args.indexOf('--' + n); return i > -1 ? args.splice(i, 2)[1] : null; };
-const cover = opt('cover'), label = opt('label'), slugOpt = opt('slug');
+const cover = opt('cover'), label = opt('label'), slugOpt = opt('slug'), picksFile = opt('picks'), category = opt('category');
 const [title, srcDir] = args;
 if (!title || !srcDir) { console.error('Usage: node tools/new-project.mjs "Title" /path/to/photos [--cover N] [--label name] [--slug slug]'); process.exit(1); }
 
@@ -16,7 +17,7 @@ const projFile = path.join(ROOT, 'content/projects', slug + '.json');
 if (fs.existsSync(projFile)) { console.error(`Project "${slug}" already exists.`); process.exit(1); }
 
 const all = fs.readdirSync(srcDir).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
-const photos = all.filter(f => /\.(jpe?g|png|tiff?|webp)$/i.test(f));
+const photos = all.filter(f => /\.(jpe?g|png|tiff?|webp)$/i.test(f) && !f.startsWith('.'));
 const videos = all.filter(f => /\.(mp4|m4v)$/i.test(f));
 if (!photos.length) { console.error('No photos found in ' + srcDir); process.exit(1); }
 
@@ -24,12 +25,24 @@ const destSrc = path.join(ROOT, 'source/work', slug);
 fs.mkdirSync(destSrc, { recursive: true });
 const pad = n => String(n).padStart(3, '0');
 const prefix = 'BAD_' + title.replace(/[^A-Za-z0-9]+/g, '_').replace(/^_|_$/g, '');
-const names = photos.map((f, i) => {
+let picked = null, pickedCover = null;
+if (picksFile) {
+  // selection from tools/pick-project.mjs ("cover: file" + "images:" list); original file names are kept
+  const lines = fs.readFileSync(picksFile, 'utf8').split('\n').map(l => l.trim());
+  pickedCover = (lines.find(l => l.startsWith('cover:')) || '').replace('cover:', '').trim();
+  picked = lines.slice(lines.indexOf('images:') + 1).filter(Boolean);
+  const missing = picked.filter(f => !fs.existsSync(path.join(srcDir, f)));
+  if (missing.length) { console.error('Missing in folder: ' + missing.join(', ')); process.exit(1); }
+}
+const names = picked ? picked.map(f => {
+  fs.copyFileSync(path.join(srcDir, f), path.join(destSrc, f));
+  return f;
+}) : photos.map((f, i) => {
   const name = `${prefix}_${pad(i + 1)}${path.extname(f).toLowerCase().replace('.jpeg', '.jpg')}`;
   fs.copyFileSync(path.join(srcDir, f), path.join(destSrc, name));
   return name;
 });
-const vidNames = videos.map(v => {
+const vidNames = (picked ? [] : videos).map(v => {
   const d = path.join(ROOT, 'images/pictures/work', slug);
   fs.mkdirSync(d, { recursive: true });
   fs.copyFileSync(path.join(srcDir, v), path.join(d, v));
@@ -38,9 +51,9 @@ const vidNames = videos.map(v => {
 
 const orders = fs.readdirSync(path.join(ROOT, 'content/projects')).filter(f => f.endsWith('.json'))
   .map(f => JSON.parse(fs.readFileSync(path.join(ROOT, 'content/projects', f), 'utf8')).order);
-const coverFile = names[Math.max(0, (cover ? +cover : 1) - 1)];
+const coverFile = pickedCover && names.includes(pickedCover) ? pickedCover : names[Math.max(0, (cover ? +cover : 1) - 1)];
 fs.writeFileSync(projFile, JSON.stringify({
-  title, label: label || title.toLowerCase(), slug,
+  title, label: label || title.toLowerCase(), category: category || '', slug,
   order: Math.min(...orders) - 1,          // newest project first
   imageDir: slug,
   cover: { dir: slug, file: coverFile },

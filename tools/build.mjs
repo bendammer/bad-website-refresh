@@ -13,7 +13,12 @@ const portfolio = readJson('content/portfolio.json');
 const projects = fs.readdirSync(path.join(ROOT, 'content/projects')).filter(f => f.endsWith('.json'))
   .map(f => readJson('content/projects/' + f)).sort((a, b) => a.order - b.order);
 const imgCfg = site.image;
-T.setCategories([...new Set(projects.map(p => p.category).filter(Boolean))]);
+{
+  // fixed menu order from site.json; categories that are used but not listed go to the end
+  const used = [...new Set(projects.map(p => p.category).filter(Boolean))];
+  const fixed = (site.categories || []).filter(c => used.includes(c));
+  T.setCategories([...fixed, ...used.filter(c => !fixed.includes(c))]);
+}
 const generated = [];
 const emit = (f, html) => { write(f, html); generated.push(f); };
 
